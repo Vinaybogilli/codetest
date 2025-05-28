@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGNIN RCM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .video-bg-section {
+      position: relative;
+      height:80vh;
+      overflow: hidden;
+    }
+    .video-bg-section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .video-bg-section .content {
+      position: relative;
+      z-index: 10;
+      color: white;
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4 sticky top-0 z-10">
+    <div class="flex justify-between items-center max-w-7xl mx-auto">
+      <img src="/logo.png" alt="SIGNIN RCM Logo" class="h-10">
+      <nav class="space-x-6 text-sm">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#insights">RCM Insights</a>
+        <a href="#technology">Technology</a>
+        <a href="#about">About Us</a>
+        <a href="#contact" class="border px-4 py-2 rounded">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Video Hero Section -->
+  <section class="video-bg-section text-center flex flex-col justify-center items-center">
+    <video autoplay muted loop>
+      <source src="vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="content">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Optimizing Revenue Cycles for Medical & Dental Practices</h2>
+      <div class="space-x-4 mb-8">
+        <button class="bg-blue-600 text-white px-6 py-2 rounded">Get a Free RCM Audit</button>
+        <button class="border border-blue-600 text-blue-600 px-6 py-2 rounded">Talk to an Expert</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Cards Section -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Core Services</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-6 shadow-lg rounded-lg text-center border hover:shadow-xl transition">
+          <img src="/icons/eligibility.png" alt="Eligibility Icon" class="w-12 mx-auto mb-4">
+          <p class="font-medium">Patient Eligibility Benefits Verification</p>
+        </div>
+        <div class="p-6 shadow-lg rounded-lg text-center border hover:shadow-xl transition">
+          <img src="/icons/coding.png" alt="Coding Icon" class="w-12 mx-auto mb-4">
+          <p class="font-medium">Medical Coding</p>
+        </div>
+        <div class="p-6 shadow-lg rounded-lg text-center border hover:shadow-xl transition">
+          <img src="/icons/denial.png" alt="AR Follow-up Icon" class="w-12 mx-auto mb-4">
+          <p class="font-medium">AR Follow-up & Denial Management</p>
+        </div>
+        <div class="p-6 shadow-lg rounded-lg text-center border hover:shadow-xl transition">
+          <img src="/icons/payment.png" alt="Payment Icon" class="w-12 mx-auto mb-4">
+          <p class="font-medium">Payment Posting</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RCM Insights Section -->
+  <section id="home" class="bg-blue-50 py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="mb-8 text-center">
+        <h3 class="text-3xl font-bold mb-4">What is Revenue Cycle Management (RCM)?</h3>
+        <p class="text-lg text-gray-700">Discover how RCM impacts your practice’s profitability and patient satisfaction.</p>
+      </div>
+      <div class="flex justify-center flex-wrap gap-4 mb-10">
+        <button class="bg-white shadow-md px-6 py-3 rounded-lg hover:bg-blue-100 transition">PMS Integration</button>
+        <button class="bg-white shadow-md px-6 py-3 rounded-lg hover:bg-blue-100 transition">EHR Compatibility</button>
+        <button class="bg-white shadow-md px-6 py-3 rounded-lg hover:bg-blue-100 transition">Analytics Dashboard</button>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <ul class="list-disc list-inside space-y-3 text-gray-800">
+          <li><strong>Why RCM Matters:</strong> It ensures timely revenue capture and improved patient engagement.</li>
+          <li><strong>Core Stages of RCM:</strong> Includes patient registration, eligibility verification, coding, billing, payment, and denial management.</li>
+          <li><strong>RCM for Medical vs. Dental Practices:</strong> Tailored workflows to suit unique clinical and operational needs.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Links Section -->
+  <section class="bg-black text-white py-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto text-center text-sm">
+      <div>
+        <h5 class="font-bold mb-2">SERVICES</h5>
+        <p>Medical Billing</p>
+        <p>AR Follow-up</p>
+        <p>Payment Posting</p>
+      </div>
+      <div>
+        <h5 class="font-bold mb-2">INDUSTRIES</h5>
+        <p>Orthopedics</p>
+        <p>Dentistry</p>
+        <p>Cardiology</p>
+      </div>
+      <div>
+        <h5 class="font-bold mb-2">ABOUT US</h5>
+        <p>Our Mission</p>
+        <p>Careers</p>
+        <p>Certifications</p>
+      </div>
+      <div>
+        <h5 class="font-bold mb-2">SOCIAL</h5>
+        <p>LinkedIn</p>
+        <p>Twitter</p>
+        <p>Facebook</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-sm">
+    <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
