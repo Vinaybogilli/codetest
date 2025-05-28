@@ -25,25 +25,155 @@
       z-index: 10;
       color: white;
     }
+    .difference-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .difference-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .difference-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+    #difference h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo-grid img {
+      max-height: 60px;
+      width: auto;
+      object-fit: contain;
+      margin: auto;
+    }
+
+   header {
+      height: 100px;
+    }
+    header img {
+      height: 100%;
+      max-height:85px;
+    }
+    header nav a {
+      font-size: 1.25rem;
+    }
+
+    
+    .dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+    .dropdown.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  
   </style>
 </head>
 <body class="font-sans">
 
-  <!-- Header -->
-  <header class="bg-white shadow p-4 sticky top-0 z-10">
-    <div class="flex justify-between items-center max-w-7xl mx-auto">
-      <img src="/logo.png" alt="SIGNIN RCM Logo" class="h-10">
-      <nav class="space-x-6 text-sm">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#industries">Industries</a>
-        <a href="#insights">RCM Insights</a>
-        <a href="#technology">Technology</a>
-        <a href="#about">About Us</a>
-        <a href="#contact" class="border px-4 py-2 rounded">Contact</a>
-      </nav>
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="logo.jpg" alt="Logo" >
+    </a>
+
+    <!-- Navigation -->
+    <nav class="flex space-x-6 text-base text-gray-700 font-medium">
+
+      <!-- Services -->
+      <div class="relative">
+        <button id="servicesBtn" class="hover:text-blue-600">Services</button>
+        <div id="servicesDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Eligibility & Benefits Verification</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Prior Authorizations</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Medical Coding</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Charge Entry & Claims</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Payment Posting</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>AR Follow-up</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Denial Management</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Credentialing</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Customized Reporting</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Dental Billing</span></a>
+        </div>
+      </div>
+
+      <!-- Industries -->
+      <div class="relative">
+        <button id="industriesBtn" class="hover:text-blue-600">Industries</button>
+        <div id="industriesDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Specialty Practices</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Hospitals</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Clinics</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Dental Practices</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Ambulatory Surgical Centers</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Labs & Diagnostics</span></a>
+        </div>
+      </div>
+
+      <!-- RCM Insights -->
+      <div class="relative">
+        <button id="insightsBtn" class="hover:text-blue-600">RCM Insights</button>
+        <div id="insightsDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>What is RCM?</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Why RCM Matters</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Core Stages</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Medical vs Dental</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>HIPAA, CMS Updates</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Billing Challenges</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>RCM Glossary</span></a>
+        </div>
+      </div>
+
+      <!-- Technology -->
+      <div class="relative">
+        <button id="techBtn" class="hover:text-blue-600">Technology</button>
+        <div id="techDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>PMS & EHR Integration</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Clearinghouse Onboarding</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Automation & AI</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>HIPAA Cloud Infra</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Payment Gateways</span></a>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="relative">
+        <button id="aboutBtn" class="hover:text-blue-600">About Us</button>
+        <div id="aboutDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Our Mission</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Leadership</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Certifications</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Careers</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Client Success</span></a>
+          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Partnerships</span></a>
+        </div>
+      </div>
+
+      <!-- Contact (no dropdown) -->
+      <button onclick="chnagepage()"  id="aboutBtn"   class="hover:text-blue-600">Contact</button>
+    </nav>
+
+    <!-- CTA -->
+    <div class="hidden md:block">
+      <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Schedule a Demo</a>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- Video Hero Section -->
   <section class="video-bg-section text-center flex flex-col justify-center items-center">
@@ -66,19 +196,19 @@
       <h2 class="text-3xl font-bold text-center mb-12">Our Core Services</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div class="p-6 shadow-lg rounded-lg text-center border hover:shadow-xl transition">
-          <img src="/icons/eligibility.png" alt="Eligibility Icon" class="w-12 mx-auto mb-4">
+          <img src="followup.png" alt="Eligibility Icon" class="w-12 mx-auto mb-4">
           <p class="font-medium">Patient Eligibility Benefits Verification</p>
         </div>
         <div class="p-6 shadow-lg rounded-lg text-center border hover:shadow-xl transition">
-          <img src="/icons/coding.png" alt="Coding Icon" class="w-12 mx-auto mb-4">
+          <img src="medicalcoding.png" alt="Coding Icon" class="w-12 mx-auto mb-4">
           <p class="font-medium">Medical Coding</p>
         </div>
         <div class="p-6 shadow-lg rounded-lg text-center border hover:shadow-xl transition">
-          <img src="/icons/denial.png" alt="AR Follow-up Icon" class="w-12 mx-auto mb-4">
+          <img src="ar.png" alt="AR Follow-up Icon" class="w-12 mx-auto mb-4">
           <p class="font-medium">AR Follow-up & Denial Management</p>
         </div>
         <div class="p-6 shadow-lg rounded-lg text-center border hover:shadow-xl transition">
-          <img src="/icons/payment.png" alt="Payment Icon" class="w-12 mx-auto mb-4">
+          <img src="paymentposting.png" alt="Payment Icon" class="w-12 mx-auto mb-4">
           <p class="font-medium">Payment Posting</p>
         </div>
       </div>
@@ -107,40 +237,203 @@
     </div>
   </section>
 
-  <!-- Footer Links Section -->
-  <section class="bg-black text-white py-12">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto text-center text-sm">
-      <div>
-        <h5 class="font-bold mb-2">SERVICES</h5>
-        <p>Medical Billing</p>
-        <p>AR Follow-up</p>
-        <p>Payment Posting</p>
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">RCM Solutions with Zero Software-Hassles</h2>
+      <p class="mb-8">All of SIGNIN RCM Solutions are PMS agnostic. We support 70+ medical and dental practice management systems and EHRs!</p>
+
+      <h3 class="text-xl font-semibold mt-8 mb-4">Medical Practice Management Systems and EHRs</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 logo-grid">
+        <img src="images/medicalsoft1.jpg" alt="Medical Software 1">
+        <img src="images/medicalsoft2.jpg" alt="Medical Software 2">
+        <img src="images/medicalsoft3.jpg" alt="Medical Software 3">
+        <img src="images/servicesimages/drchrono.webp" alt="Medical Software 4">
       </div>
-      <div>
-        <h5 class="font-bold mb-2">INDUSTRIES</h5>
-        <p>Orthopedics</p>
-        <p>Dentistry</p>
-        <p>Cardiology</p>
+
+      <h3 class="text-xl font-semibold mt-8 mb-4">Dental Practice Management Systems</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 logo-grid">
+        <img src="images/dentalsoft1.jpg" alt="Dental Software 1">
+        <img src="images/dentalsoft2.jpg" alt="Dental Software 2">
+        <img src="images/dentalsoft3.jpg" alt="Dental Software 3">
+        <img src="images/dentalsoft.jpg" alt="Dental Software 4">
       </div>
-      <div>
-        <h5 class="font-bold mb-2">ABOUT US</h5>
-        <p>Our Mission</p>
-        <p>Careers</p>
-        <p>Certifications</p>
-      </div>
-      <div>
-        <h5 class="font-bold mb-2">SOCIAL</h5>
-        <p>LinkedIn</p>
-        <p>Twitter</p>
-        <p>Facebook</p>
+
+      <h3 class="text-xl font-semibold mt-8 mb-4">We Expertise in Clearing House Onboarding</h3>
+      <p>Seamless clearinghouse onboarding designed to enhance your revenue cycle efficiency</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 logo-grid">
+        <img src="images/servicesimages/availity.png" alt="Clearinghouse 1">
+        <img src="images/waystar.jpg" alt="Clearinghouse 2">
+        <img src="images/changehealthcare.jpg" alt="Clearinghouse 3">
+        <img src="images/trizetto.jpg" alt="Clearinghouse 4">
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 py-6 text-center text-sm">
+   <div class="mt-10 text-center" >
+        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+          Get Started with SIGNIN RCM
+        </a>
+      </div>
+</div>
+
+<br>
+
+  
+
+
+   <!-- Why Choose SIGNIN RCM Section -->
+<section class="bg-blue-50 py-16">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-blue-800">Why Choose SIGNIN RCM?</h2>
+    <p class="text-lg mb-10 text-gray-700 max-w-3xl mx-auto">
+      At SIGNIN RCM, we don’t just manage your revenue cycle — we partner in your success. With deep expertise across specialties, a commitment to innovation, and a relentless focus on results, we help practices like yours achieve financial excellence.
+    </p>
+    <div class="grid md:grid-cols-3 gap-8 text-left">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2 text-blue-700">End-to-End RCM Expertise</h3>
+        <p class="text-gray-600">From eligibility to denial management, we cover every touchpoint with accuracy and efficiency to ensure maximum reimbursement.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2 text-blue-700">Tailored to Your Specialty</h3>
+        <p class="text-gray-600">Whether you're a solo practitioner or a large multispecialty group, we customize workflows and solutions to meet your unique needs.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2 text-blue-700">Trusted by 100+ Providers</h3>
+        <p class="text-gray-600">Join the growing network of healthcare professionals who trust SIGNIN RCM to streamline operations and accelerate revenue.</p>
+      </div>
+    </div>
+    <div class="mt-10">
+      <a href="#footer" class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-full transition">
+        Talk to an RCM Expert
+      </a>
+    </div>
+  </div>
+</section>
+
+
+   <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-12">What Our Clients Say</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
+          <p class="italic mb-4">"SIGNIN RCM has completely transformed our revenue process. Their expertise and support are unmatched!"</p>
+          <h5 class="font-semibold">— Dr. Melissa Carter</h5>
+          <p class="text-sm text-gray-500">Cardiology Practice</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
+          <p class="italic mb-4">"We’ve seen a 30% increase in collections after partnering with SIGNIN RCM. Truly game-changing."</p>
+          <h5 class="font-semibold">— Dr. Ahmed Khan</h5>
+          <p class="text-sm text-gray-500">Orthopedic Surgeon</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
+          <p class="italic mb-4">"Their technology-forward approach made onboarding seamless and results visible within weeks!"</p>
+          <h5 class="font-semibold">— Dr. Susan Lee</h5>
+          <p class="text-sm text-gray-500">Dental Group</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Call to Action Section -->
+<section class="bg-gray-50 py-20 text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+      Ready to Transform Your Revenue?
+    </h2>
+    <p class="text-lg md:text-xl text-gray-700 mb-10 font-light">
+      Partner with <span class="font-semibold">SIGNIN RCM</span> to streamline your revenue cycle and start maximizing collections today.
+    </p>
+    <a href="#contact" class="inline-block bg-blue-600 text-white font-semibold text-lg px-8 py-3 rounded-full shadow-md hover:bg-blue-700 transition duration-300">
+      Get in Touch
+    </a>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- Footer Links Section -->
+ <footer>
+  <section class="bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">Services</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Medical Billing</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">AR Follow-up</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Payment Posting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">Industries</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Orthopedics</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Dentistry</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Cardiology</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">About Us</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Our Mission</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Careers</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Certifications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">Social</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">LinkedIn</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Twitter</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-gray-900 text-gray-300 py-6 text-center text-sm">
     <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
-  </footer>
+  </div>
+</footer>
+
+
+  <script>
+
+  function changepage(){
+    window.href.location="contact.html";
+  }
+  function setupDropdown(btnId, dropdownId) {
+    const btn = document.getElementById(btnId);
+    const dropdown = document.getElementById(dropdownId);
+
+    btn.addEventListener('mouseenter', () => dropdown.classList.add('show'));
+    btn.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        if (!dropdown.matches(':hover') && !btn.matches(':hover')) {
+          dropdown.classList.remove('show');
+        }
+      }, 100);
+    });
+
+    dropdown.addEventListener('mouseenter', () => dropdown.classList.add('show'));
+    dropdown.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        if (!dropdown.matches(':hover') && !btn.matches(':hover')) {
+          dropdown.classList.remove('show');
+        }
+      }, 100);
+    });
+  }
+
+  setupDropdown('servicesBtn', 'servicesDropdown');
+  setupDropdown('industriesBtn', 'industriesDropdown');
+  setupDropdown('insightsBtn', 'insightsDropdown');
+  setupDropdown('techBtn', 'techDropdown');
+  setupDropdown('aboutBtn', 'aboutDropdown');
+</script>
 
 </body>
 </html>
