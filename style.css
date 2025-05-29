@@ -1,0 +1,199 @@
+
+  .video-bg-section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+  }
+
+  .video-bg-section {
+  position: relative;
+  height: 50vh; 
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .video-bg-section {
+    height: 80vh;
+  }
+}
+
+
+    .video-bg-section .content {
+      position: relative;
+      z-index: 10;
+      color: white;
+    }
+    .difference-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .difference-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .difference-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+    #difference h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo-grid img {
+      max-height: 60px;
+      width: auto;
+      object-fit: contain;
+      margin: auto;
+    }
+
+  
+    
+ header {
+      height: 100px;
+    }
+    header img {
+      height: 100%;
+      max-height: 85px;
+    }
+    header nav a {
+      font-size: 1.25rem;
+    }
+    .dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      font-size: 1.25rem;
+    }
+    .dropdown.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    /* Rotate arrow when expanded */
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
+
+    #mobileMenu {
+  position: fixed;
+  top: 80px; /* Adjust as needed */
+  left: 0;
+  right: 0;
+  width: 100%; /* Ensure full width */
+  z-index: 50
+    }
+  
+
+/*-------contact page------------*/
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+    h1, h2 {
+      color: #1a237e;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button[type="submit"] {
+      background-color: #1a73e8;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #155cc0;
+    }
+    .signin-section {
+      margin-top: 2rem;
+    }
+    .signin-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #0d47a1;
+    }
+    .signin-location h3 {
+      font-weight: bold;
+      color: #1a237e;
+    }
+    ul li {
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #0c0c0c;
+      color: #eee;
+      padding: 2rem 0;
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .newsletter-form input {
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      border: none;
+      border-radius: 4px;
+    }
+    .newsletter-form button {
+      padding: 0.5rem 1rem;
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+    }
+    .social-icons img {
+      width: 28px;
+      margin-right: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .newsletter-form {
+        margin-top: 1rem;
+      }
+    }
+  

@@ -5,97 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIGNIN RCM</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    .video-bg-section {
-      position: relative;
-      height:80vh;
-      overflow: hidden;
-    }
-    .video-bg-section video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    .video-bg-section .content {
-      position: relative;
-      z-index: 10;
-      color: white;
-    }
-    .difference-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem;
-    }
-    .difference-card {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .difference-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    }
-    #difference h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .logo-grid img {
-      max-height: 60px;
-      width: auto;
-      object-fit: contain;
-      margin: auto;
-    }
-
-   header {
-      height: 100px;
-    }
-    header img {
-      height: 100%;
-      max-height:85px;
-    }
-    header nav a {
-      font-size: 1.25rem;
-    }
-
-    
-    .dropdown {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease;
-      font-size: 1.25rem;
-    }
-    .dropdown.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-  
-  </style>
+  <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans">
+
+<body class="bg-gray-50">
 
 <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
-      <img src="logo.jpg" alt="Logo" >
+      <img src="logo.jpg" alt="Logo" />
     </a>
 
-    <!-- Navigation -->
-    <nav class="flex space-x-6 text-base text-gray-700 font-medium">
+    <!-- Hamburger menu button - mobile only -->
+    <button id="mobileMenuBtn" class="md:hidden p-2 rounded hover:bg-gray-100 focus:outline-none" aria-label="Toggle menu">
+      <!-- Hamburger icon -->
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+
+    <!-- Navigation (hidden on mobile) -->
+    <nav id="desktopNav" class="hidden md:flex space-x-6 text-base text-gray-700 font-medium">
 
       <!-- Services -->
       <div class="relative">
@@ -145,52 +79,177 @@
       <div class="relative">
         <button id="techBtn" class="hover:text-blue-600">Technology</button>
         <div id="techDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
-          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>PMS & EHR Integration</span></a>
-          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Clearinghouse Onboarding</span></a>
-          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Automation & AI</span></a>
-          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>HIPAA Cloud Infra</span></a>
-          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Payment Gateways</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>RCM Platform</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>AI & Automation</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Interoperability</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Data Analytics</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Cloud Solutions</span></a>
         </div>
       </div>
 
-      <!-- About -->
+      <!-- About Us -->
       <div class="relative">
         <button id="aboutBtn" class="hover:text-blue-600">About Us</button>
         <div id="aboutDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
-          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Our Mission</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Company</span></a>
           <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Leadership</span></a>
-          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Certifications</span></a>
           <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Careers</span></a>
-          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Client Success</span></a>
-          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Partnerships</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Contact</span></a>
         </div>
       </div>
 
-      <!-- Contact (no dropdown) -->
-      <button onclick="changepage()"  id="aboutBtn"   class="hover:text-blue-600">Contact</button>
+      <!-- Contact button -->
+      <button onclick="changepage()" class="hover:text-blue-600">Contact</button>
     </nav>
 
-    <!-- CTA -->
+    <!-- CTA button - visible only on md+ -->
     <div class="hidden md:block">
       <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Schedule a Demo</a>
     </div>
   </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <!-- Mobile Menu Sidebar -->
+<nav id="mobileMenu"
+     class="md:hidden bg-white shadow-lg fixed top-[80px] left-0 right-0 bottom-0 overflow-auto p-6 space-y-6 text-gray-700 font-medium text-base hidden z-50">
+
+  <!-- Services Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      Services
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Eligibility & Benefits Verification</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Prior Authorizations</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Medical Coding</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Charge Entry & Claims</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Payment Posting</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>AR Follow-up</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Denial Management</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Credentialing</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Customized Reporting</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Dental Billing</span></a>
+    </div>
+  </div>
+
+  <!-- Industries Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      Industries
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Specialty Practices</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Hospitals</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Clinics</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Dental Practices</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Ambulatory Surgical Centers</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Labs & Diagnostics</span></a>
+    </div>
+  </div>
+
+  <!-- RCM Insights Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      RCM Insights
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>What is RCM?</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Why RCM Matters</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Core Stages</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Medical vs Dental</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>HIPAA, CMS Updates</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Billing Challenges</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>RCM Glossary</span></a>
+    </div>
+  </div>
+
+  <!-- Technology Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      Technology
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>RCM Platform</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>AI & Automation</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Interoperability</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Data Analytics</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Cloud Solutions</span></a>
+    </div>
+  </div>
+
+  <!-- About Us Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      About Us
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Company</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Leadership</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Careers</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Contact</span></a>
+    </div>
+  </div>
+
+  <!-- Contact Button -->
+  <div>
+    <button onclick="changepage()" class="w-full text-left py-2 hover:text-blue-600">Contact</button>
+  </div>
+
+  <!-- Schedule a Demo Button -->
+  <div>
+    <a href="#contact" class="block bg-blue-600 text-white text-center px-4 py-2 rounded hover:bg-blue-700 transition">Schedule a Demo</a>
+  </div>
+</nav>
 </header>
 
   <!-- Video Hero Section -->
-  <section class="video-bg-section text-center flex flex-col justify-center items-center">
-    <video autoplay muted loop>
-      <source src="vid.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="content">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Optimizing Revenue Cycles for Medical & Dental Practices</h2>
-      <div class="space-x-4 mb-8">
-        <button class="bg-blue-600 text-white px-6 py-2 rounded">Get a Free SIGNIN RCM Audit</button>
-        <button class="border border-blue-600 text-blue-600 px-6 py-2 rounded">Talk to an SIGNIN Expert</button>
-      </div>
+  <section class="video-bg-section relative w-full overflow-hidden">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="vid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+  <!-- Content -->
+  <div class="relative z-20 flex flex-col justify-center items-center text-center h-full px-4">
+    <h2 class="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-6 max-w-2xl">
+      Optimizing Revenue Cycles for Medical & Dental Practices
+    </h2>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+        Get a Free SIGNIN RCM Audit
+      </button>
+      <button class="border border-blue-600 text-blue-600 px-6 py-2 rounded hover:bg-blue-600 hover:text-white transition">
+        Talk to an SIGNIN RCM Expert
+      </button>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Services Cards Section -->
   <section id="services" class="py-16 bg-white">
@@ -326,6 +385,26 @@
       <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:text-blue-600 transition">
         <img src="images/servicesimages/wound.jpeg" alt="Wound Care" class="h-12 w-12 rounded-full shadow-md">
         <span>Wound Care</span>
+      </a>
+
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:text-blue-600 transition">
+        <img src="images/servicesimages/podiatry.jpg" alt="Rheumatology" class="h-12 w-12 rounded-full shadow-md">
+        <span>Podiatry</span>
+      </a>
+
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:text-blue-600 transition">
+        <img src="images/servicesimages/behavioral health.jpg" alt="Surgery" class="h-12 w-12 rounded-full shadow-md">
+        <span>Behavioral Health</span>
+      </a>
+
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:text-blue-600 transition">
+        <img src="images/servicesimages/gastoenterology.jpg" alt="Urology" class="h-12 w-12 rounded-full shadow-md">
+        <span>Gastroenterology</span>
+      </a>
+
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:text-blue-600 transition">
+        <img src="images/servicesimages/ophthalmology.jpeg" alt="Wound Care" class="h-12 w-12 rounded-full shadow-md">
+        <span>Opthalmology</span>
       </a>
     </div>
 
@@ -499,43 +578,6 @@
     <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
   </div>
 </footer>
-
-
-  <script>
-
-  function changepage() {
-  window.location.href = "contact.html";
-}
-
-  function setupDropdown(btnId, dropdownId) {
-    const btn = document.getElementById(btnId);
-    const dropdown = document.getElementById(dropdownId);
-
-    btn.addEventListener('mouseenter', () => dropdown.classList.add('show'));
-    btn.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        if (!dropdown.matches(':hover') && !btn.matches(':hover')) {
-          dropdown.classList.remove('show');
-        }
-      }, 100);
-    });
-
-    dropdown.addEventListener('mouseenter', () => dropdown.classList.add('show'));
-    dropdown.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        if (!dropdown.matches(':hover') && !btn.matches(':hover')) {
-          dropdown.classList.remove('show');
-        }
-      }, 100);
-    });
-  }
-
-  setupDropdown('servicesBtn', 'servicesDropdown');
-  setupDropdown('industriesBtn', 'industriesDropdown');
-  setupDropdown('insightsBtn', 'insightsDropdown');
-  setupDropdown('techBtn', 'techDropdown');
-  setupDropdown('aboutBtn', 'aboutDropdown');
-</script>
-
+<script src="scripts.js"></script>
 </body>
 </html>

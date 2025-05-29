@@ -1,282 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | SIGNIN RCM</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="headerstyle.css"/>
-  <link rel="icon" type="image/jpg" href="images/linkimage.jpg"/>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-    }
-    h1, h2 {
-      color: #1a237e;
-    }
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button[type="submit"] {
-      background-color: #1a73e8;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button[type="submit"]:hover {
-      background-color: #155cc0;
-    }
-    .signin-section {
-      margin-top: 2rem;
-    }
-    .signin-section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #0d47a1;
-    }
-    .signin-location h3 {
-      font-weight: bold;
-      color: #1a237e;
-    }
-    ul li {
-      margin-bottom: 1rem;
-    }
-    footer {
-      background: #0c0c0c;
-      color: #eee;
-      padding: 2rem 0;
-    }
-    .footer-content {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .newsletter-form input {
-      padding: 0.5rem;
-      margin-right: 0.5rem;
-      border: none;
-      border-radius: 4px;
-    }
-    .newsletter-form button {
-      padding: 0.5rem 1rem;
-      background: #1a73e8;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-    }
-    .social-icons img {
-      width: 28px;
-      margin-right: 0.5rem;
-    }
-    @media (max-width: 768px) {
-      .footer-content {
-        flex-direction: column;
-        text-align: center;
-      }
-      .newsletter-form {
-        margin-top: 1rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGNIN RCM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div id="wrapper1">
-    <!-- Header -->
-    <header class="navbar">
-      <!-- keep your existing navbar -->
-    </header>
 
-    <main>
-      <img src="images/logo3.JPG" alt="Contact Banner" width="100%" />
+<body class="bg-gray-50">
 
-      <section class="container mt-8">
-        <h2 class="text-2xl font-bold mb-4">Looking for Medical or Dental RCM Support?</h2>
-        <p class="mb-6">Fill out the form below to be connected with a SIGNIN RCM Specialist.</p>
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="logo.jpg" alt="Logo" />
+    </a>
 
-        <p><strong>Are you a patient?</strong> Please visit our <a href="#">Patient Support</a> page for billing questions.</p>
+    <!-- Hamburger menu button - mobile only -->
+    <button id="mobileMenuBtn" class="md:hidden p-2 rounded hover:bg-gray-100 focus:outline-none" aria-label="Toggle menu">
+      <!-- Hamburger icon -->
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
 
-        <form action="https://api.web3forms.com/submit" method="POST" class="mt-8">
-          <input type="hidden" name="access_key" value="cfea687b-2ae0-44f2-b928-7792b0fcd594" />
-          <input type="hidden" name="redirect" value="home.html" />
+    <!-- Navigation (hidden on mobile) -->
+    <nav id="desktopNav" class="hidden md:flex space-x-6 text-base text-gray-700 font-medium">
 
-          <div class="form-group">
-            <label for="title">Title*</label>
-            <select id="title" name="title" required>
-              <option value="">--select an item--</option>
-              <option>Dr.</option>
-              <option>Mr.</option>
-              <option>Ms.</option>
-              <option>Mrs.</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="firstName">Name*</label>
-            <input type="text" id="firstName" name="firstName" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone*</label>
-            <input type="tel" id="phone" name="phone" required />
-          </div>
-
-          <div class="form-group">
-            <label for="state">State*</label>
-            <input type="text" id="state" name="state" required />
-          </div>
-
-          <div class="form-group">
-            <label for="specialty">Specialty*</label>
-            <select id="specialty" name="specialty" required>
-              <option value="">--select an item--</option>
-              <option>Medical</option>
-              <option>Dental</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="practiceName">Practice Name*</label>
-            <input type="text" id="practiceName" name="practiceName" required />
-          </div>
-
-          <div class="form-group">
-            <label for="rcmOutsourced">RCM Outsourced?*</label>
-            <select id="rcmOutsourced" name="rcmOutsourced" required>
-              <option value="">--select an item--</option>
-              <option>Yes</option>
-              <option>No</option>
-              <option>Considering</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="pms">Practice Management System (PMS)*</label>
-            <select id="pms" name="pms" required>
-              <option value="">--select an item--</option>
-              <option>Epic</option>
-              <option>Cerner</option>
-              <option>eClinicalWorks</option>
-              <option>NextGen</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Optional: share any specific questions or requirements..."></textarea>
-          </div>
-
-          <button type="submit">Submit</button>
-          <p class="note mt-2 text-sm text-gray-600">* Required fields</p>
-        </form>
-      </section>
-
-      <!-- Additional contact info section -->
-      <section class="container signin-section">
-        <h1>Looking for another way to connect?</h1>
-        <p>Explore more ways to reach out to <strong>SIGNIN RCM</strong>.</p>
-
-        <!-- Contact Info -->
-        <div class="signin-section">
-          <h2>Contact Us</h2>
-          <ul>
-            <li><strong>Medical Sales:</strong> <a href="mailto:sales@signinrcm.com">sales@signinrcm.com</a> | 877-741-4573</li>
-            <li><strong>Dental Sales:</strong> <a href="mailto:dental@signinrcm.com">dental@signinrcm.com</a> | 800-407-0106</li>
-            <li><strong>Corporate:</strong> <a href="mailto:contact@signinrcm.com">contact@signinrcm.com</a></li>
-            <li><strong>Careers:</strong> <a href="mailto:careers@signinrcm.com">careers@signinrcm.com</a></li>
-          </ul>
-        </div>
-
-        <!-- Office Locations -->
-        <div class="signin-section">
-          <h2>USA Office</h2>
-          <p><strong>2076 Maryland Oaks Cir, Saint Louis MO 63146</strong><br>
-          Toll Free: 877-284-7362 | Local: 786-621-4400 | Fax: 305-675-2788</p>
-
-          <hr><br>
-
-          <h2>India Offices</h2>
-
-          <div class="signin-location">
-            <h3>Bengaluru</h3>
-            <p>No 48, Jayanagar 6th Block, Bengaluru - 560082<br>Phone: +91 888 666 0617</p>
-          </div>
-          <div class="signin-location">
-            <h3>Chennai</h3>
-            <p>G16 B Spencer Plaza, Chennai - 600002<br>Phone: +91 888 666 0678</p>
-          </div>
-          <div class="signin-location">
-            <h3>Hyderabad</h3>
-            <p>Begumpet, Hyderabad - 500016<br>Phone: +91 888 666 0680</p>
-          </div>
-          <div class="signin-location">
-            <h3>Tirupati</h3>
-            <p>By-Pass Road, Tirupati - 517501<br>Phone: +91 888 666 0609</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-left">
-          <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
-        </div>
-
-        <div class="footer-center">
-          <form class="newsletter-form">
-            <label for="newsletter">Subscribe to our Newsletter:</label>
-            <input type="email" id="newsletter" placeholder="Enter your email" />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
-
-        <div class="footer-right">
-          <p>Follow us:</p>
-          <div class="social-icons">
-            <a href="#"><img src="images/facebook.jpg" alt="Facebook" /></a>
-            <a href="#"><img src="images/instagram.jpg" alt="Instagram" /></a>
-            <a href="#"><img src="images/whatsapp.jpg" alt="WhatsApp" /></a>
-            <a href="#"><img src="images/linkedin.jpg" alt="LinkedIn" /></a>
-          </div>
+      <!-- Services -->
+      <div class="relative">
+        <button id="servicesBtn" class="hover:text-blue-600">Services</button>
+        <div id="servicesDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600 transition"> <img src="paymentposting.png" class="h-8 w-8"><span>Eligibility & Benefits Verification</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Prior Authorizations</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Medical Coding</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Charge Entry & Claims</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Payment Posting</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>AR Follow-up</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Denial Management</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Credentialing</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Customized Reporting</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Dental Billing</span></a>
         </div>
       </div>
-    </footer>
+
+      <!-- Industries -->
+      <div class="relative">
+        <button id="industriesBtn" class="hover:text-blue-600">Industries</button>
+        <div id="industriesDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Specialty Practices</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Hospitals</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Clinics</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Dental Practices</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Ambulatory Surgical Centers</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Labs & Diagnostics</span></a>
+        </div>
+      </div>
+
+      <!-- RCM Insights -->
+      <div class="relative">
+        <button id="insightsBtn" class="hover:text-blue-600">RCM Insights</button>
+        <div id="insightsDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>What is RCM?</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Why RCM Matters</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Core Stages</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Medical vs Dental</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>HIPAA, CMS Updates</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Billing Challenges</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>RCM Glossary</span></a>
+        </div>
+      </div>
+
+      <!-- Technology -->
+      <div class="relative">
+        <button id="techBtn" class="hover:text-blue-600">Technology</button>
+        <div id="techDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>RCM Platform</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>AI & Automation</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Interoperability</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Data Analytics</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Cloud Solutions</span></a>
+        </div>
+      </div>
+
+      <!-- About Us -->
+      <div class="relative">
+        <button id="aboutBtn" class="hover:text-blue-600">About Us</button>
+        <div id="aboutDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Company</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Leadership</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Careers</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Contact</span></a>
+        </div>
+      </div>
+
+      <!-- Contact button -->
+      <button onclick="changepage()" class="hover:text-blue-600">Contact</button>
+    </nav>
+
+    <!-- CTA button - visible only on md+ -->
+    <div class="hidden md:block">
+      <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Schedule a Demo</a>
+    </div>
   </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <!-- Mobile Menu Sidebar -->
+<nav id="mobileMenu"
+     class="md:hidden bg-white shadow-lg fixed top-[80px] left-0 right-0 bottom-0 overflow-auto p-6 space-y-6 text-gray-700 font-medium text-base hidden z-50">
+
+  <!-- Services Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      Services
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Eligibility & Benefits Verification</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Prior Authorizations</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Medical Coding</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Charge Entry & Claims</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Payment Posting</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>AR Follow-up</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Denial Management</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Credentialing</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Customized Reporting</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Dental Billing</span></a>
+    </div>
+  </div>
+
+  <!-- Industries Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      Industries
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Specialty Practices</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Hospitals</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Clinics</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Dental Practices</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Ambulatory Surgical Centers</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Labs & Diagnostics</span></a>
+    </div>
+  </div>
+
+  <!-- RCM Insights Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      RCM Insights
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>What is RCM?</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Why RCM Matters</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Core Stages</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Medical vs Dental</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>HIPAA, CMS Updates</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Billing Challenges</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>RCM Glossary</span></a>
+    </div>
+  </div>
+
+  <!-- Technology Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      Technology
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>RCM Platform</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>AI & Automation</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Interoperability</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Data Analytics</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Cloud Solutions</span></a>
+    </div>
+  </div>
+
+  <!-- About Us Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      About Us
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Company</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Leadership</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Careers</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Contact</span></a>
+    </div>
+  </div>
+
+  <!-- Contact Button -->
+  <div>
+    <button onclick="changepage()" class="w-full text-left py-2 hover:text-blue-600">Contact</button>
+  </div>
+
+  <!-- Schedule a Demo Button -->
+  <div>
+    <a href="#contact" class="block bg-blue-600 text-white text-center px-4 py-2 rounded hover:bg-blue-700 transition">Schedule a Demo</a>
+  </div>
+</nav>
+</header>
+
+<main>
+  <!-- Logo -->
+<img src="images/logo3.JPG" alt="Logo" class="w-full h-auto mb-8" />
+
+<!-- Contact Form Section -->
+<div class="max-w-3xl mx-auto p-6 bg-white shadow rounded-lg">
+  <h2 class="text-2xl font-semibold mb-4">Looking for Medical or Dental RCM Support?</h2>
+  <p class="mb-6">Fill out the form below to be connected with a Medusind Business Specialist who will discuss your needs in detail.</p>
+
+  <div class="bg-blue-50 p-4 rounded mb-6">
+    <p><strong>Are you a patient?</strong> If you're a patient with a billing question, please mail us at the <a href="#" class="text-blue-600 underline">Patient Support page</a>.</p>
+  </div>
+
+  <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+    <input type="hidden" name="access_key" value="cfea687b-2ae0-44f2-b928-7792b0fcd594">
+    <input type="hidden" name="redirect" value="home.html" />
+
+    <!-- Title -->
+    <div>
+      <label for="title" class="block font-medium">Title*</label>
+      <select id="title" name="title" required class="w-full border border-gray-300 rounded p-2">
+        <option value="">--select an item--</option>
+        <option>Dr.</option>
+        <option>Mr.</option>
+        <option>Ms.</option>
+        <option>Mrs.</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <!-- Name -->
+    <div>
+      <label for="firstName" class="block font-medium">Name*</label>
+      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 rounded p-2" />
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="email" class="block font-medium">Email*</label>
+      <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded p-2" />
+    </div>
+
+    <!-- Phone -->
+    <div>
+      <label for="phone" class="block font-medium">Phone*</label>
+      <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded p-2" />
+    </div>
+
+    <!-- State -->
+    <div>
+      <label for="state" class="block font-medium">State*</label>
+      <input type="text" id="state" name="state" required class="w-full border border-gray-300 rounded p-2" />
+    </div>
+
+    <!-- Specialty -->
+    <div>
+      <label for="specialty" class="block font-medium">Specialty*</label>
+      <select id="specialty" name="specialty" required class="w-full border border-gray-300 rounded p-2">
+        <option value="">--select an item--</option>
+        <option>Medical</option>
+        <option>Dental</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <!-- Practice Name -->
+    <div>
+      <label for="practiceName" class="block font-medium">Practice Name*</label>
+      <input type="text" id="practiceName" name="practiceName" required class="w-full border border-gray-300 rounded p-2" />
+    </div>
+
+    <!-- RCM Outsourced -->
+    <div>
+      <label for="rcmOutsourced" class="block font-medium">RCM Outsourced?*</label>
+      <select id="rcmOutsourced" name="rcmOutsourced" required class="w-full border border-gray-300 rounded p-2">
+        <option value="">--select an item--</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Considering</option>
+      </select>
+    </div>
+
+    <!-- PMS -->
+    <div>
+      <label for="pms" class="block font-medium">Practice Management System (PMS)*</label>
+      <select id="pms" name="pms" required class="w-full border border-gray-300 rounded p-2">
+        <option value="">--select an item--</option>
+        <option>Epic</option>
+        <option>Cerner</option>
+        <option>eClinicalWorks</option>
+        <option>NextGen</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label for="message" class="block font-medium">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Optional: share any specific questions or requirements..." class="w-full border border-gray-300 rounded p-2"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
+    <p class="text-sm text-gray-500">* Required fields</p>
+  </form>
+</div>
+
+<!-- Contact Info Section -->
+<div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg">
+  <h1 class="text-2xl font-semibold mb-4">Looking for another way to connect?</h1>
+  <p class="mb-6">Explore more ways to get in touch with <strong>SIGNIN RCM</strong>.</p>
+
+  <div class="space-y-6">
+    <!-- Contact Details -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li>
+          <strong class="block">Medical Sales Inquiries</strong>
+          Email: <a class="text-blue-600 underline" href="mailto:sales@signinrcm.com">sales@signinrcm.com</a><br />
+          Phone: 877-741-4573
+        </li>
+        <li>
+          <strong class="block">Dental Sales Inquiries</strong>
+          Email: <a class="text-blue-600 underline" href="mailto:dental@signinrcm.com">dental@signinrcm.com</a><br />
+          Phone: 800-407-0106
+        </li>
+        <li>
+          <strong class="block">Corporate Inquiries</strong>
+          Email: <a class="text-blue-600 underline" href="mailto:contact@signinrcm.com">contact@signinrcm.com</a>
+        </li>
+        <li>
+          <strong class="block">Careers</strong>
+          Email: <a class="text-blue-600 underline" href="mailto:careers@signinrcm.com">careers@signinrcm.com</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- USA Office -->
+    <div>
+      <h2 class="text-xl font-semibold mt-6">USA Offices</h2>
+      <div class="mt-2 text-gray-700">
+        <h3 class="font-medium">2076 Maryland Oaks Cir, Saint Louis MO 63146</h3>
+        <p>Toll Free: 877-284-7362<br />Local: 786-621-4400<br />Fax: 305-675-2788</p>
+      </div>
+    </div>
+
+    <!-- India Offices -->
+    <div>
+      <h2 class="text-xl font-semibold mt-6">India Offices</h2>
+
+      <div class="grid md:grid-cols-2 gap-4 mt-4 text-gray-700">
+        <div>
+          <h3 class="font-medium">Bengaluru</h3>
+          <p>Ground Floor, No 48,<br />Jayanagar 6th Block,<br />Bengaluru - 560082<br />Landmark: Yediyur Lake<br />Phone No: +91 888 666 0617</p>
+        </div>
+        <div>
+          <h3 class="font-medium">Chennai</h3>
+          <p>G16 B Spencer Plaza,<br />Chennai - 600002<br />Phone No: +91 888 666 0678</p>
+        </div>
+        <div>
+          <h3 class="font-medium">Hyderabad</h3>
+          <p>Plot No. 12, H. No. 1-10-72/5/2/a,<br />2nd Floor, Chikoti Gardens,<br />Begumpet, Hyderabad - 500016<br />Landmark: Beside Nalli Silks<br />Phone No: +91 888 666 0680</p>
+        </div>
+        <div>
+          <h3 class="font-medium">Tirupati</h3>
+          <p>20-91/D-1, OPP: Hotel S.K.,<br />Tirumala By-Pass Road, Tirupati - 517501<br />Landmark: Opp Saptagiri Grameena Bank<br />Phone No: +91 888 666 0609</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+  
+
+  <!-- Footer Links Section -->
+ <footer>
+  <section class="bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">Services</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Medical Billing</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">AR Follow-up</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Payment Posting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">Industries</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Orthopedics</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Dentistry</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Cardiology</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">About Us</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Our Mission</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Careers</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Certifications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">Social</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">LinkedIn</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Twitter</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-gray-900 text-gray-300 py-6 text-center text-sm">
+    <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
+  </div>
+</footer>
+<script src="scripts.js"></script>
 </body>
 </html>

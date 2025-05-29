@@ -3,142 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RCM Dropdowns</title>
+  <title>Responsive Header with Sidebar</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .dropdown {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease;
-    }
-    .dropdown.show {
-      opacity: 1;
-      visibility: visible;
-    }
-  </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 
+<!-- HEADER -->
 <header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
     <!-- Logo -->
-    <a href="#home" class="flex items-center space-x-2">
-      <img src="https://via.placeholder.com/120x40?text=Logo" alt="Logo" class="h-10">
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="logo.jpg" alt="Logo" class="h-10">
     </a>
 
-    <!-- Navigation -->
-    <nav class="flex space-x-6 text-base text-gray-700 font-medium">
-
-      <!-- Services -->
-      <div class="relative">
-        <button id="servicesBtn" class="hover:text-blue-600">Services</button>
-        <div id="servicesDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Eligibility & Benefits Verification</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Prior Authorizations</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Medical Coding</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Charge Entry & Claims</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Payment Posting</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>AR Follow-up</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Denial Management</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Credentialing</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Customized Reporting</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Dental Billing</span></a>
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 text-base text-gray-700 font-medium">
+      <div class="relative group">
+        <button class="hover:text-blue-600">Services</button>
+        <div class="absolute left-0 top-full w-screen bg-white shadow-lg px-6 py-8 grid grid-cols-2 gap-6 hidden group-hover:grid text-sm">
+          <a href="#" class="hover:text-blue-600">Eligibility & Benefits Verification</a>
+          <a href="#" class="hover:text-blue-600">Prior Authorizations</a>
+          <!-- Add more as needed -->
         </div>
       </div>
-
-      <!-- Industries -->
-      <div class="relative">
-        <button id="industriesBtn" class="hover:text-blue-600">Industries</button>
-        <div id="industriesDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Specialty Practices</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Hospitals</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Clinics</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Dental Practices</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Ambulatory Surgical Centers</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Labs & Diagnostics</span></a>
+      <div class="relative group">
+        <button class="hover:text-blue-600">Industries</button>
+        <div class="absolute left-0 top-full w-screen bg-white shadow-lg px-6 py-8 grid grid-cols-2 gap-6 hidden group-hover:grid text-sm">
+          <a href="#" class="hover:text-blue-600">Specialty Practices</a>
+          <a href="#" class="hover:text-blue-600">Hospitals</a>
         </div>
       </div>
-
-      <!-- RCM Insights -->
-      <div class="relative">
-        <button id="insightsBtn" class="hover:text-blue-600">RCM Insights</button>
-        <div id="insightsDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>What is RCM?</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Why RCM Matters</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Core Stages</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Medical vs Dental</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>HIPAA, CMS Updates</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Billing Challenges</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>RCM Glossary</span></a>
-        </div>
-      </div>
-
-      <!-- Technology -->
-      <div class="relative">
-        <button id="techBtn" class="hover:text-blue-600">Technology</button>
-        <div id="techDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>PMS & EHR Integration</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Clearinghouse Onboarding</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Automation & AI</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>HIPAA Cloud Infra</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Payment Gateways</span></a>
-        </div>
-      </div>
-
-      <!-- About -->
-      <div class="relative">
-        <button id="aboutBtn" class="hover:text-blue-600">About Us</button>
-        <div id="aboutDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Our Mission</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Leadership</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Certifications</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Careers</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Client Success</span></a>
-          <a class="flex items-center space-x-4 hover:text-blue-600"><img src="icon.jpg" class="h-8 w-8"> <span>Partnerships</span></a>
-        </div>
-      </div>
-
-      <!-- Contact (no dropdown) -->
-      <a href="#contact" class="hover:text-blue-600">Contact</a>
+      <a href="#" class="hover:text-blue-600">RCM Insights</a>
+      <a href="#" class="hover:text-blue-600">Technology</a>
+      <a href="#" class="hover:text-blue-600">About Us</a>
+      <a href="#" class="hover:text-blue-600">Contact</a>
     </nav>
 
-    <!-- CTA -->
-    <div class="hidden md:block">
-      <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Schedule a Demo</a>
-    </div>
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
   </div>
 </header>
 
-<!-- JS Hover Logic -->
+<!-- SIDEBAR OVERLAY -->
+<div id="mobileSidebarOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+<!-- MOBILE SIDEBAR -->
+<div id="mobileSidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-md z-50 transform -translate-x-full transition-transform duration-300 overflow-y-auto">
+  <div class="flex justify-between items-center px-4 py-4 border-b">
+    <span class="font-semibold text-lg">Menu</span>
+    <button id="closeSidebar" class="text-gray-700 text-xl">&times;</button>
+  </div>
+
+  <nav class="px-4 py-4 space-y-4 text-gray-800">
+    <!-- Services -->
+    <div>
+      <button class="w-full flex justify-between items-center font-semibold" onclick="toggleDropdown('servicesDropdown')">
+        Services
+        <span>▾</span>
+      </button>
+      <div id="servicesDropdown" class="pl-4 mt-2 hidden space-y-2 text-sm">
+        <a href="#" class="block hover:text-blue-600">Eligibility & Benefits Verification</a>
+        <a href="#" class="block hover:text-blue-600">Prior Authorizations</a>
+        <a href="#" class="block hover:text-blue-600">Medical Coding</a>
+      </div>
+    </div>
+
+    <!-- Industries -->
+    <div>
+      <button class="w-full flex justify-between items-center font-semibold" onclick="toggleDropdown('industriesDropdown')">
+        Industries
+        <span>▾</span>
+      </button>
+      <div id="industriesDropdown" class="pl-4 mt-2 hidden space-y-2 text-sm">
+        <a href="#" class="block hover:text-blue-600">Specialty Practices</a>
+        <a href="#" class="block hover:text-blue-600">Hospitals</a>
+        <a href="#" class="block hover:text-blue-600">Clinics</a>
+      </div>
+    </div>
+
+    <!-- Others (no dropdowns) -->
+    <a href="#" class="block font-semibold hover:text-blue-600">RCM Insights</a>
+    <a href="#" class="block font-semibold hover:text-blue-600">Technology</a>
+    <a href="#" class="block font-semibold hover:text-blue-600">About Us</a>
+    <a href="#" class="block font-semibold hover:text-blue-600">Contact</a>
+  </nav>
+</div>
+
+<!-- JS for Sidebar + Dropdowns -->
 <script>
-  function setupDropdown(btnId, dropdownId) {
-    const btn = document.getElementById(btnId);
-    const dropdown = document.getElementById(dropdownId);
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileSidebar = document.getElementById('mobileSidebar');
+  const mobileSidebarOverlay = document.getElementById('mobileSidebarOverlay');
+  const closeSidebar = document.getElementById('closeSidebar');
 
-    btn.addEventListener('mouseenter', () => dropdown.classList.add('show'));
-    btn.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        if (!dropdown.matches(':hover') && !btn.matches(':hover')) {
-          dropdown.classList.remove('show');
-        }
-      }, 100);
-    });
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileSidebar.classList.remove('-translate-x-full');
+    mobileSidebarOverlay.classList.remove('hidden');
+  });
 
-    dropdown.addEventListener('mouseenter', () => dropdown.classList.add('show'));
-    dropdown.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        if (!dropdown.matches(':hover') && !btn.matches(':hover')) {
-          dropdown.classList.remove('show');
-        }
-      }, 100);
-    });
+  closeSidebar.addEventListener('click', () => {
+    mobileSidebar.classList.add('-translate-x-full');
+    mobileSidebarOverlay.classList.add('hidden');
+  });
+
+  mobileSidebarOverlay.addEventListener('click', () => {
+    mobileSidebar.classList.add('-translate-x-full');
+    mobileSidebarOverlay.classList.add('hidden');
+  });
+
+  function toggleDropdown(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('hidden');
   }
-
-  setupDropdown('servicesBtn', 'servicesDropdown');
-  setupDropdown('industriesBtn', 'industriesDropdown');
-  setupDropdown('insightsBtn', 'insightsDropdown');
-  setupDropdown('techBtn', 'techDropdown');
-  setupDropdown('aboutBtn', 'aboutDropdown');
 </script>
 
 </body>
