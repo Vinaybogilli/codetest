@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIGNIN RCM</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Coding Services</title>
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
   <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom Styling */
+        .hero-bg {
+            background-image: url('images/logo1.JPG');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-header {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #1F2937;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .card-hover:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
 
-<header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
@@ -218,184 +254,121 @@
 </nav>
 </header>
 
-<main>
-  <!-- Logo -->
-<img src="images/logo3.JPG" alt="Logo" class="w-full h-auto mb-8" />
+    <!-- Hero Section -->
+    <section class="relative text-white py-40 hero-bg">
+        <!-- Dark overlay for better text contrast -->
+        <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Dark overlay -->
 
-<!-- Contact Form Section -->
-<div class="max-w-3xl mx-auto p-6 bg-white shadow rounded-lg">
-  <h2 class="text-2xl font-semibold mb-4">Looking for Medical or Dental RCM Support?</h2>
-  <p class="mb-6">Fill out the form below to be connected with a Medusind Business Specialist who will discuss your needs in detail.</p>
-
-  <div class="bg-blue-50 p-4 rounded mb-6">
-    <p><strong>Are you a patient?</strong> If you're a patient with a billing question, please mail us at the <a href="#" class="text-blue-600 underline">Patient Support page</a>.</p>
-  </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-    <input type="hidden" name="access_key" value="cfea687b-2ae0-44f2-b928-7792b0fcd594">
-    <input type="hidden" name="redirect" value="home.html" />
-
-    <!-- Title -->
-    <div>
-      <label for="title" class="block font-medium">Title*</label>
-      <select id="title" name="title" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Dr.</option>
-        <option>Mr.</option>
-        <option>Ms.</option>
-        <option>Mrs.</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Name -->
-    <div>
-      <label for="firstName" class="block font-medium">Name*</label>
-      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Email -->
-    <div>
-      <label for="email" class="block font-medium">Email*</label>
-      <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Phone -->
-    <div>
-      <label for="phone" class="block font-medium">Phone*</label>
-      <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- State -->
-    <div>
-      <label for="state" class="block font-medium">State*</label>
-      <input type="text" id="state" name="state" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Specialty -->
-    <div>
-      <label for="specialty" class="block font-medium">Specialty*</label>
-      <select id="specialty" name="specialty" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Medical</option>
-        <option>Dental</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Practice Name -->
-    <div>
-      <label for="practiceName" class="block font-medium">Practice Name*</label>
-      <input type="text" id="practiceName" name="practiceName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- RCM Outsourced -->
-    <div>
-      <label for="rcmOutsourced" class="block font-medium">RCM Outsourced?*</label>
-      <select id="rcmOutsourced" name="rcmOutsourced" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Considering</option>
-      </select>
-    </div>
-
-    <!-- PMS -->
-    <div>
-      <label for="pms" class="block font-medium">Practice Management System (PMS)*</label>
-      <select id="pms" name="pms" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Epic</option>
-        <option>Cerner</option>
-        <option>eClinicalWorks</option>
-        <option>NextGen</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Message -->
-    <div>
-      <label for="message" class="block font-medium">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Optional: share any specific questions or requirements..." class="w-full border border-gray-300 rounded p-2"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
-    <p class="text-sm text-gray-500">* Required fields</p>
-  </form>
-</div>
-
-<!-- Contact Info Section -->
-<div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg">
-  <h1 class="text-2xl font-semibold mb-4">Looking for another way to connect?</h1>
-  <p class="mb-6">Explore more ways to get in touch with <strong>SIGNIN RCM</strong>.</p>
-
-  <div class="space-y-6">
-    <!-- Contact Details -->
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>
-          <strong class="block">Medical Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:sales@signinrcm.com">sales@signinrcm.com</a><br />
-          Phone: 877-741-4573
-        </li>
-        <li>
-          <strong class="block">Dental Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:dental@signinrcm.com">dental@signinrcm.com</a><br />
-          Phone: 800-407-0106
-        </li>
-        <li>
-          <strong class="block">Corporate Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:contact@signinrcm.com">contact@signinrcm.com</a>
-        </li>
-        <li>
-          <strong class="block">Careers</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:careers@signinrcm.com">careers@signinrcm.com</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- USA Office -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">USA Offices</h2>
-      <div class="mt-2 text-gray-700">
-        <h3 class="font-medium">2076 Maryland Oaks Cir, Saint Louis MO 63146</h3>
-        <p>Toll Free: 877-284-7362<br />Local: 786-621-4400<br />Fax: 305-675-2788</p>
-      </div>
-    </div>
-
-    <!-- India Offices -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">India Offices</h2>
-
-      <div class="grid md:grid-cols-2 gap-4 mt-4 text-gray-700">
-        <div>
-          <h3 class="font-medium">Bengaluru</h3>
-          <p>Ground Floor, No 48,<br />Jayanagar 6th Block,<br />Bengaluru - 560082<br />Landmark: Yediyur Lake<br />Phone No: +91 888 666 0617</p>
+        <!-- Content container -->
+        <div class="max-w-6xl mx-auto text-center px-6 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Medical Coding Services</h1>
+            <p class="text-lg md:text-xl">
+                Ensure accurate and compliant billing with our expert medical coding services. We streamline the coding process to maximize reimbursements and minimize claim denials.
+            </p>
         </div>
-        <div>
-          <h3 class="font-medium">Chennai</h3>
-          <p>G16 B Spencer Plaza,<br />Chennai - 600002<br />Phone No: +91 888 666 0678</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Hyderabad</h3>
-          <p>Plot No. 12, H. No. 1-10-72/5/2/a,<br />2nd Floor, Chikoti Gardens,<br />Begumpet, Hyderabad - 500016<br />Landmark: Beside Nalli Silks<br />Phone No: +91 888 666 0680</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Tirupati</h3>
-          <p>20-91/D-1, OPP: Hotel S.K.,<br />Tirumala By-Pass Road, Tirupati - 517501<br />Landmark: Opp Saptagiri Grameena Bank<br />Phone No: +91 888 666 0609</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-</main>
+    <!-- Introduction Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header">Why Medical Coding is Crucial?</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+                Accurate medical coding is fundamental to your practice's financial health. With proper codes, you ensure timely and correct reimbursements while avoiding legal issues and claim denials. Our team specializes in translating clinical data into standardized codes that ensure accuracy and compliance.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Accuracy & Compliance</h3>
+                    <p class="text-gray-600">Our certified coders ensure your practice stays compliant with all medical coding regulations, reducing the risk of audits and fines.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Maximized Reimbursement</h3>
+                    <p class="text-gray-600">We optimize your claim submissions, ensuring the correct codes are used, leading to faster and higher reimbursements from insurers.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Reduced Claim Denials</h3>
+                    <p class="text-gray-600">With accurate coding, the likelihood of claim denials is significantly reduced, leading to improved revenue cycle management and better cash flow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  
+    <!-- Medical Coding Process Section -->
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header">Our Medical Coding Process</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+                We follow a meticulous process to ensure all diagnoses, procedures, and treatments are accurately translated into the correct medical codes. Here’s how we do it:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 1: Patient Record Review</h3>
+                    <p class="text-gray-600">We start by reviewing the patient's medical records, including diagnoses, procedures, and treatments to identify the necessary codes.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 2: Code Assignment</h3>
+                    <p class="text-gray-600">Certified medical coders assign accurate codes based on the latest medical coding guidelines (ICD, CPT, HCPCS). Every code is verified for correctness and compliance.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 3: Code Validation</h3>
+                    <p class="text-gray-600">The assigned codes are validated for accuracy and completeness, ensuring the correct procedure and diagnosis codes are used for insurance claims.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 4: Submission to Payers</h3>
+                    <p class="text-gray-600">After validation, the codes are submitted to the insurance payer for reimbursement. We ensure timely submission to reduce payment delays.</p>
+                </div>
+                <!-- Step 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 5: Follow-Up & Resubmission</h3>
+                    <p class="text-gray-600">If there are any issues with the claim (e.g., denials or underpayment), we follow up and resubmit claims as needed to ensure proper reimbursement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer Links Section -->
+    <!-- Benefits of Medical Coding Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header">Benefits of Our Medical Coding Services</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+                Investing in accurate medical coding services can have a significant impact on your practice’s bottom line. Here are some key benefits of partnering with us:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Streamlined Claims Process</h3>
+                    <p class="text-gray-600">We help streamline your claims submission process, ensuring that all codes are accurate and submitted promptly, reducing delays and increasing reimbursements.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Fewer Claim Denials</h3>
+                    <p class="text-gray-600">With our attention to detail and accuracy, we reduce the risk of claim denials, ensuring your practice gets paid for every service rendered.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Improved Cash Flow</h3>
+                    <p class="text-gray-600">Faster reimbursements and fewer denied claims mean your practice will see improved cash flow and overall financial health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="text-black py-20">
+        <div class="max-w-6xl mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold mb-6">Ready to Improve Your Medical Coding?</h2>
+            <p class="text-lg mb-8">Our certified medical coders are ready to ensure that your claims are accurate, compliant, and processed quickly. Let’s work together to streamline your revenue cycle.</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+ <!-- Footer Links Section -->
  <footer>
   <section class="bg-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
@@ -440,4 +413,5 @@
 </footer>
 <script src="scripts.js"></script>
 </body>
+
 </html>

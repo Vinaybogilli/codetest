@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIGNIN RCM</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Billing Services</title>
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+     <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
+     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .section-header {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2d3748;
+        }
+        .highlight-text {
+            color: #3182ce;
+            font-weight: bold;
+        }
+        .cta-button {
+            background-color: #3182ce;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #2b6cb0;
+        }
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-
 <body class="bg-gray-50">
 
-<header class="bg-white shadow-md sticky top-0 z-50">
+  <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
@@ -218,184 +249,130 @@
 </nav>
 </header>
 
+
 <main>
-  <!-- Logo -->
-<img src="images/logo3.JPG" alt="Logo" class="w-full h-auto mb-8" />
+<!-- Header Section -->
+<section class="relative text-white py-40" style="background-image: url('images/servicesimages/dentalimage.jpg'); background-size: cover; background-position: center;">
+    <!-- Dark overlay for better text contrast -->
+    <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Dark overlay -->
 
-<!-- Contact Form Section -->
-<div class="max-w-3xl mx-auto p-6 bg-white shadow rounded-lg">
-  <h2 class="text-2xl font-semibold mb-4">Looking for Medical or Dental RCM Support?</h2>
-  <p class="mb-6">Fill out the form below to be connected with a Medusind Business Specialist who will discuss your needs in detail.</p>
-
-  <div class="bg-blue-50 p-4 rounded mb-6">
-    <p><strong>Are you a patient?</strong> If you're a patient with a billing question, please mail us at the <a href="#" class="text-blue-600 underline">Patient Support page</a>.</p>
-  </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-    <input type="hidden" name="access_key" value="cfea687b-2ae0-44f2-b928-7792b0fcd594">
-    <input type="hidden" name="redirect" value="home.html" />
-
-    <!-- Title -->
-    <div>
-      <label for="title" class="block font-medium">Title*</label>
-      <select id="title" name="title" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Dr.</option>
-        <option>Mr.</option>
-        <option>Ms.</option>
-        <option>Mrs.</option>
-        <option>Other</option>
-      </select>
+    <!-- Content container -->
+    <div class="max-w-6xl mx-auto text-center px-6 relative z-10">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Dental Billing Services</h1>
+        <p class="text-lg md:text-xl">
+            Our comprehensive dental billing services ensure that your practice gets paid promptly and efficiently. 
+            From accurate coding to patient invoicing, we handle it all.
+        </p>
     </div>
+</section>
 
-    <!-- Name -->
-    <div>
-      <label for="firstName" class="block font-medium">Name*</label>
-      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
 
-    <!-- Email -->
-    <div>
-      <label for="email" class="block font-medium">Email*</label>
-      <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Phone -->
-    <div>
-      <label for="phone" class="block font-medium">Phone*</label>
-      <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- State -->
-    <div>
-      <label for="state" class="block font-medium">State*</label>
-      <input type="text" id="state" name="state" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Specialty -->
-    <div>
-      <label for="specialty" class="block font-medium">Specialty*</label>
-      <select id="specialty" name="specialty" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Medical</option>
-        <option>Dental</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Practice Name -->
-    <div>
-      <label for="practiceName" class="block font-medium">Practice Name*</label>
-      <input type="text" id="practiceName" name="practiceName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- RCM Outsourced -->
-    <div>
-      <label for="rcmOutsourced" class="block font-medium">RCM Outsourced?*</label>
-      <select id="rcmOutsourced" name="rcmOutsourced" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Considering</option>
-      </select>
-    </div>
-
-    <!-- PMS -->
-    <div>
-      <label for="pms" class="block font-medium">Practice Management System (PMS)*</label>
-      <select id="pms" name="pms" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Epic</option>
-        <option>Cerner</option>
-        <option>eClinicalWorks</option>
-        <option>NextGen</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Message -->
-    <div>
-      <label for="message" class="block font-medium">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Optional: share any specific questions or requirements..." class="w-full border border-gray-300 rounded p-2"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
-    <p class="text-sm text-gray-500">* Required fields</p>
-  </form>
-</div>
-
-<!-- Contact Info Section -->
-<div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg">
-  <h1 class="text-2xl font-semibold mb-4">Looking for another way to connect?</h1>
-  <p class="mb-6">Explore more ways to get in touch with <strong>SIGNIN RCM</strong>.</p>
-
-  <div class="space-y-6">
-    <!-- Contact Details -->
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>
-          <strong class="block">Medical Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:sales@signinrcm.com">sales@signinrcm.com</a><br />
-          Phone: 877-741-4573
-        </li>
-        <li>
-          <strong class="block">Dental Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:dental@signinrcm.com">dental@signinrcm.com</a><br />
-          Phone: 800-407-0106
-        </li>
-        <li>
-          <strong class="block">Corporate Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:contact@signinrcm.com">contact@signinrcm.com</a>
-        </li>
-        <li>
-          <strong class="block">Careers</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:careers@signinrcm.com">careers@signinrcm.com</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- USA Office -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">USA Offices</h2>
-      <div class="mt-2 text-gray-700">
-        <h3 class="font-medium">2076 Maryland Oaks Cir, Saint Louis MO 63146</h3>
-        <p>Toll Free: 877-284-7362<br />Local: 786-621-4400<br />Fax: 305-675-2788</p>
-      </div>
-    </div>
-
-    <!-- India Offices -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">India Offices</h2>
-
-      <div class="grid md:grid-cols-2 gap-4 mt-4 text-gray-700">
-        <div>
-          <h3 class="font-medium">Bengaluru</h3>
-          <p>Ground Floor, No 48,<br />Jayanagar 6th Block,<br />Bengaluru - 560082<br />Landmark: Yediyur Lake<br />Phone No: +91 888 666 0617</p>
+<!-- Introduction Section -->
+<section class="py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="section-header">Why Choose Our Dental Billing Services?</h2>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+            Dental billing is a crucial component of your practice’s financial health. We specialize in accurate coding, timely claim submissions, and efficient collections to help you maximize revenue and reduce administrative burdens.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Benefit 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Maximize Revenue</h3>
+                <p class="text-gray-600">Our team ensures that every procedure is coded correctly and submitted on time, reducing claim denials and maximizing reimbursements.</p>
+            </div>
+            <!-- Benefit 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Reduce Administrative Work</h3>
+                <p class="text-gray-600">Focus on patient care while we take care of all billing tasks—from claim submission to payment posting and follow-ups.</p>
+            </div>
+            <!-- Benefit 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Improve Cash Flow</h3>
+                <p class="text-gray-600">With accurate billing and prompt follow-ups, we help improve your practice’s cash flow, ensuring payments are received on time.</p>
+            </div>
         </div>
-        <div>
-          <h3 class="font-medium">Chennai</h3>
-          <p>G16 B Spencer Plaza,<br />Chennai - 600002<br />Phone No: +91 888 666 0678</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Hyderabad</h3>
-          <p>Plot No. 12, H. No. 1-10-72/5/2/a,<br />2nd Floor, Chikoti Gardens,<br />Begumpet, Hyderabad - 500016<br />Landmark: Beside Nalli Silks<br />Phone No: +91 888 666 0680</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Tirupati</h3>
-          <p>20-91/D-1, OPP: Hotel S.K.,<br />Tirumala By-Pass Road, Tirupati - 517501<br />Landmark: Opp Saptagiri Grameena Bank<br />Phone No: +91 888 666 0609</p>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
+</section>
 
+<!-- Dental Billing Process Section -->
+<section class="bg-gray-100 py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="section-header">Our Dental Billing Process</h2>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+            Our streamlined process ensures that your practice's billing is efficient, transparent, and error-free. Here's how it works:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Step 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 1: Patient Information Collection</h3>
+                <p class="text-gray-600">We gather essential patient information, including insurance details and demographics, to ensure the billing process runs smoothly.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 2: Code Assignment</h3>
+                <p class="text-gray-600">Our certified coders assign accurate codes for dental procedures to ensure that claims are submitted correctly and payments are maximized.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 3: Claim Submission</h3>
+                <p class="text-gray-600">We submit claims to insurance companies on behalf of your practice, ensuring that all information is accurate and compliant with industry standards.</p>
+            </div>
+            <!-- Step 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 4: Payment Posting</h3>
+                <p class="text-gray-600">Once payment is received, we post the payments accurately to patient accounts and update your records to ensure everything is in order.</p>
+            </div>
+            <!-- Step 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 5: Patient Billing</h3>
+                <p class="text-gray-600">We handle patient billing for any remaining balances, ensuring clear communication and ease of payment through various channels.</p>
+            </div>
+            <!-- Step 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 6: Denial Management</h3>
+                <p class="text-gray-600">We manage and resolve denied claims, ensuring that any issues are addressed promptly and efficiently, reducing the time between service and payment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dental Billing Benefits Section -->
+<section class="py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="section-header">Why Rely on Our Dental Billing Services?</h2>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+            Dental practices face unique challenges when it comes to billing and insurance claims. We offer specialized services designed to meet the needs of your practice:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Benefit 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Expert Dental Coders</h3>
+                <p class="text-gray-600">Our team is experienced in dental coding, ensuring accuracy and compliance with all insurance requirements.</p>
+            </div>
+            <!-- Benefit 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">End-to-End Billing Solutions</h3>
+                <p class="text-gray-600">From claim submission to patient follow-ups, we provide comprehensive billing solutions that take care of everything.</p>
+            </div>
+            <!-- Benefit 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Timely and Accurate Payments</h3>
+                <p class="text-gray-600">We ensure timely claim submissions and accurate payment processing to optimize your practice's cash flow.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class=" text-black py-20">
+    <div class="max-w-6xl mx-auto text-center px-6">
+        <h2 class="text-3xl font-bold mb-6">Ready to Streamline Your Dental Billing?</h2>
+        <p class="text-lg mb-8">Let us help you optimize your billing process, improve cash flow, and reduce administrative burdens. Our team is ready to assist!</p>
+        <a href="#contact" class="cta-button">Get Started Today</a>
+    </div>
+</section>
 </main>
-
-  
-
-  <!-- Footer Links Section -->
+ <!-- Footer Links Section -->
  <footer>
   <section class="bg-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
@@ -438,6 +415,7 @@
     <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
   </div>
 </footer>
+
 <script src="scripts.js"></script>
 </body>
 </html>

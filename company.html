@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIGNIN RCM</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Signin RCM</title>
+ <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
   <link rel="stylesheet" href="style.css">
+  
 </head>
-
 <body class="bg-gray-50">
 
-<header class="bg-white shadow-md sticky top-0 z-50">
+  <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
@@ -218,185 +218,121 @@
 </nav>
 </header>
 
-<main>
-  <!-- Logo -->
-<img src="images/logo3.JPG" alt="Logo" class="w-full h-auto mb-8" />
+<main class="bg-gray-50">
 
-<!-- Contact Form Section -->
-<div class="max-w-3xl mx-auto p-6 bg-white shadow rounded-lg">
-  <h2 class="text-2xl font-semibold mb-4">Looking for Medical or Dental RCM Support?</h2>
-  <p class="mb-6">Fill out the form below to be connected with a Medusind Business Specialist who will discuss your needs in detail.</p>
+  <!-- Redesigned Hero Section -->
+  
 
-  <div class="bg-blue-50 p-4 rounded mb-6">
-    <p><strong>Are you a patient?</strong> If you're a patient with a billing question, please mail us at the <a href="#" class="text-blue-600 underline">Patient Support page</a>.</p>
-  </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-    <input type="hidden" name="access_key" value="cfea687b-2ae0-44f2-b928-7792b0fcd594">
-    <input type="hidden" name="redirect" value="home.html" />
-
-    <!-- Title -->
-    <div>
-      <label for="title" class="block font-medium">Title*</label>
-      <select id="title" name="title" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Dr.</option>
-        <option>Mr.</option>
-        <option>Ms.</option>
-        <option>Mrs.</option>
-        <option>Other</option>
-      </select>
+  <!-- Intro Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl text-center">
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Welcome to <span class="font-semibold text-blue-600">Signin RCM</span>, where innovation meets integrity. As a leading provider of Revenue Cycle Management (RCM) solutions, we specialize in streamlining medical billing processes, optimizing healthcare revenue, and delivering value-driven outcomes for providers across the country.
+      </p>
     </div>
+  </section>
 
-    <!-- Name -->
-    <div>
-      <label for="firstName" class="block font-medium">Name*</label>
-      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 rounded p-2" />
+  <!-- Vision & Mission -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 max-w-6xl">
+      <div>
+        <h3 class="text-3xl font-semibold text-blue-600 mb-4">Our Vision</h3>
+        <p class="text-lg text-gray-700">To be the most trusted partner in healthcare revenue solutions, transforming financial performance through innovation, accuracy, and unmatched service.</p>
+      </div>
+      <div>
+        <h3 class="text-3xl font-semibold text-blue-600 mb-4">Our Mission</h3>
+        <p class="text-lg text-gray-700">At Signin RCM, our mission is to simplify and optimize the revenue cycle for healthcare providers by delivering reliable, efficient, and transparent billing solutions — enabling them to focus on what matters most: patient care.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Email -->
-    <div>
-      <label for="email" class="block font-medium">Email*</label>
-      <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Phone -->
-    <div>
-      <label for="phone" class="block font-medium">Phone*</label>
-      <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- State -->
-    <div>
-      <label for="state" class="block font-medium">State*</label>
-      <input type="text" id="state" name="state" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Specialty -->
-    <div>
-      <label for="specialty" class="block font-medium">Specialty*</label>
-      <select id="specialty" name="specialty" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Medical</option>
-        <option>Dental</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Practice Name -->
-    <div>
-      <label for="practiceName" class="block font-medium">Practice Name*</label>
-      <input type="text" id="practiceName" name="practiceName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- RCM Outsourced -->
-    <div>
-      <label for="rcmOutsourced" class="block font-medium">RCM Outsourced?*</label>
-      <select id="rcmOutsourced" name="rcmOutsourced" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Considering</option>
-      </select>
-    </div>
-
-    <!-- PMS -->
-    <div>
-      <label for="pms" class="block font-medium">Practice Management System (PMS)*</label>
-      <select id="pms" name="pms" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Epic</option>
-        <option>Cerner</option>
-        <option>eClinicalWorks</option>
-        <option>NextGen</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Message -->
-    <div>
-      <label for="message" class="block font-medium">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Optional: share any specific questions or requirements..." class="w-full border border-gray-300 rounded p-2"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
-    <p class="text-sm text-gray-500">* Required fields</p>
-  </form>
-</div>
-
-<!-- Contact Info Section -->
-<div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg">
-  <h1 class="text-2xl font-semibold mb-4">Looking for another way to connect?</h1>
-  <p class="mb-6">Explore more ways to get in touch with <strong>SIGNIN RCM</strong>.</p>
-
-  <div class="space-y-6">
-    <!-- Contact Details -->
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>
-          <strong class="block">Medical Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:sales@signinrcm.com">sales@signinrcm.com</a><br />
-          Phone: 877-741-4573
-        </li>
-        <li>
-          <strong class="block">Dental Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:dental@signinrcm.com">dental@signinrcm.com</a><br />
-          Phone: 800-407-0106
-        </li>
-        <li>
-          <strong class="block">Corporate Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:contact@signinrcm.com">contact@signinrcm.com</a>
-        </li>
-        <li>
-          <strong class="block">Careers</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:careers@signinrcm.com">careers@signinrcm.com</a>
-        </li>
+  <!-- Who We Are -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h3 class="text-3xl font-semibold text-blue-600 mb-6 text-center">Who We Are</h3>
+      <p class="text-lg text-gray-700 mb-6 text-center">
+        Signin RCM is a team of dedicated RCM professionals with deep expertise in medical billing, coding, compliance, and practice management. We collaborate with clinics, hospitals, and private practices to:
+      </p>
+      <ul class="list-disc list-inside text-gray-700 max-w-xl mx-auto space-y-2 text-lg">
+        <li>Maximize collections</li>
+        <li>Reduce claim denials</li>
+        <li>Ensure compliance with evolving healthcare regulations</li>
+        <li>Improve overall financial health</li>
       </ul>
     </div>
+  </section>
 
-    <!-- USA Office -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">USA Offices</h2>
-      <div class="mt-2 text-gray-700">
-        <h3 class="font-medium">2076 Maryland Oaks Cir, Saint Louis MO 63146</h3>
-        <p>Toll Free: 877-284-7362<br />Local: 786-621-4400<br />Fax: 305-675-2788</p>
+  <!-- What Sets Us Apart -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h3 class="text-3xl font-semibold text-blue-600 text-center mb-10">What Sets Us Apart</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">Expertise Across Specialties</h4>
+          <p>From cardiology to dermatology, our specialists understand your specific billing needs.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">End-to-End RCM Solutions</h4>
+          <p>We manage everything from patient registration to final payment posting.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">Technology-Driven Results</h4>
+          <p>Harnessing advanced software and analytics to drive accuracy and efficiency.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">Compliance First</h4>
+          <p>HIPAA-compliant and always ahead of healthcare regulatory changes.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition md:col-span-2">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">Dedicated Support Team</h4>
+          <p>Real people. Real help. Always here for you.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition md:col-span-2">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">Customized Solutions</h4>
+          <p>Tailored billing strategies designed to meet the unique needs of your practice.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- India Offices -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">India Offices</h2>
-
-      <div class="grid md:grid-cols-2 gap-4 mt-4 text-gray-700">
-        <div>
-          <h3 class="font-medium">Bengaluru</h3>
-          <p>Ground Floor, No 48,<br />Jayanagar 6th Block,<br />Bengaluru - 560082<br />Landmark: Yediyur Lake<br />Phone No: +91 888 666 0617</p>
+  <!-- Core Values -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-4xl font-bold text-blue-600 mb-12">Our Core Values</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-2xl font-semibold text-blue-700 mb-2">Integrity</h4>
+          <p>We do the right thing, always.</p>
         </div>
-        <div>
-          <h3 class="font-medium">Chennai</h3>
-          <p>G16 B Spencer Plaza,<br />Chennai - 600002<br />Phone No: +91 888 666 0678</p>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-2xl font-semibold text-blue-700 mb-2">Transparency</h4>
+          <p>Clear, honest communication in every interaction.</p>
         </div>
-        <div>
-          <h3 class="font-medium">Hyderabad</h3>
-          <p>Plot No. 12, H. No. 1-10-72/5/2/a,<br />2nd Floor, Chikoti Gardens,<br />Begumpet, Hyderabad - 500016<br />Landmark: Beside Nalli Silks<br />Phone No: +91 888 666 0680</p>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-2xl font-semibold text-blue-700 mb-2">Excellence</h4>
+          <p>Striving for perfection in every claim.</p>
         </div>
-        <div>
-          <h3 class="font-medium">Tirupati</h3>
-          <p>20-91/D-1, OPP: Hotel S.K.,<br />Tirumala By-Pass Road, Tirupati - 517501<br />Landmark: Opp Saptagiri Grameena Bank<br />Phone No: +91 888 666 0609</p>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-2xl font-semibold text-blue-700 mb-2">Innovation</h4>
+          <p>Continuously improving through smart technologies.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-2xl font-semibold text-blue-700 mb-2">Client-Centric</h4>
+          <p>Your success is our success.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-2xl font-semibold text-blue-700 mb-2">Collaboration</h4>
+          <p>We believe great outcomes come from working together—internally and with our clients.</p>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
 </main>
 
-  
+ 
 
-  <!-- Footer Links Section -->
- <footer>
+<footer>
   <section class="bg-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
       <div>

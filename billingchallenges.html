@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIGNIN RCM</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="bg-gray-50">
-
+<body>
 <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
@@ -217,185 +215,120 @@
   </div>
 </nav>
 </header>
-
-<main>
-  <!-- Logo -->
-<img src="images/logo3.JPG" alt="Logo" class="w-full h-auto mb-8" />
-
-<!-- Contact Form Section -->
-<div class="max-w-3xl mx-auto p-6 bg-white shadow rounded-lg">
-  <h2 class="text-2xl font-semibold mb-4">Looking for Medical or Dental RCM Support?</h2>
-  <p class="mb-6">Fill out the form below to be connected with a Medusind Business Specialist who will discuss your needs in detail.</p>
-
-  <div class="bg-blue-50 p-4 rounded mb-6">
-    <p><strong>Are you a patient?</strong> If you're a patient with a billing question, please mail us at the <a href="#" class="text-blue-600 underline">Patient Support page</a>.</p>
-  </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-    <input type="hidden" name="access_key" value="cfea687b-2ae0-44f2-b928-7792b0fcd594">
-    <input type="hidden" name="redirect" value="home.html" />
-
-    <!-- Title -->
-    <div>
-      <label for="title" class="block font-medium">Title*</label>
-      <select id="title" name="title" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Dr.</option>
-        <option>Mr.</option>
-        <option>Ms.</option>
-        <option>Mrs.</option>
-        <option>Other</option>
-      </select>
+    <!-- Section: Introduction -->
+<section class="bg-gray-50 py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Billing Challenges in Medical and Dental Billing</h2>
+        <p class="text-lg md:text-xl text-gray-700 mb-8">
+            Billing in the medical and dental fields is often complicated by various challenges that can affect the efficiency and 
+            profitability of practices. Below, we highlight the key billing issues faced by healthcare providers.
+        </p>
     </div>
+</section>
 
-    <!-- Name -->
-    <div>
-      <label for="firstName" class="block font-medium">Name*</label>
-      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
+<!-- Section: Medical Billing Challenges -->
+<section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-8">Medical Billing Challenges</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Challenge 1 -->
+            <div class="bg-gray-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Coding Errors</h4>
+                <p class="text-gray-600">
+                    Medical billing requires accurate coding for a range of services. Incorrect codes can lead to denials, rejections, and financial loss. 
+                    Staying up-to-date with coding systems like ICD-10, CPT, and HCPCS is essential.
+                </p>
+            </div>
+            
+            <!-- Challenge 2 -->
+            <div class="bg-gray-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Claim Denials & Rejections</h4>
+                <p class="text-gray-600">
+                    Claims can be denied or rejected for various reasons, including missing or incorrect information. 
+                    The time and resources needed to appeal and resubmit claims can be substantial.
+                </p>
+            </div>
 
-    <!-- Email -->
-    <div>
-      <label for="email" class="block font-medium">Email*</label>
-      <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
+            <!-- Challenge 3 -->
+            <div class="bg-gray-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Slow Payment Processing</h4>
+                <p class="text-gray-600">
+                    Payments from insurance companies can take weeks to process. This results in delayed cash flow for medical practices. 
+                    Managing multiple insurers with different processing times can complicate payment tracking.
+                </p>
+            </div>
 
-    <!-- Phone -->
-    <div>
-      <label for="phone" class="block font-medium">Phone*</label>
-      <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- State -->
-    <div>
-      <label for="state" class="block font-medium">State*</label>
-      <input type="text" id="state" name="state" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Specialty -->
-    <div>
-      <label for="specialty" class="block font-medium">Specialty*</label>
-      <select id="specialty" name="specialty" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Medical</option>
-        <option>Dental</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Practice Name -->
-    <div>
-      <label for="practiceName" class="block font-medium">Practice Name*</label>
-      <input type="text" id="practiceName" name="practiceName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- RCM Outsourced -->
-    <div>
-      <label for="rcmOutsourced" class="block font-medium">RCM Outsourced?*</label>
-      <select id="rcmOutsourced" name="rcmOutsourced" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Considering</option>
-      </select>
-    </div>
-
-    <!-- PMS -->
-    <div>
-      <label for="pms" class="block font-medium">Practice Management System (PMS)*</label>
-      <select id="pms" name="pms" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Epic</option>
-        <option>Cerner</option>
-        <option>eClinicalWorks</option>
-        <option>NextGen</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Message -->
-    <div>
-      <label for="message" class="block font-medium">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Optional: share any specific questions or requirements..." class="w-full border border-gray-300 rounded p-2"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
-    <p class="text-sm text-gray-500">* Required fields</p>
-  </form>
-</div>
-
-<!-- Contact Info Section -->
-<div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg">
-  <h1 class="text-2xl font-semibold mb-4">Looking for another way to connect?</h1>
-  <p class="mb-6">Explore more ways to get in touch with <strong>SIGNIN RCM</strong>.</p>
-
-  <div class="space-y-6">
-    <!-- Contact Details -->
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>
-          <strong class="block">Medical Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:sales@signinrcm.com">sales@signinrcm.com</a><br />
-          Phone: 877-741-4573
-        </li>
-        <li>
-          <strong class="block">Dental Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:dental@signinrcm.com">dental@signinrcm.com</a><br />
-          Phone: 800-407-0106
-        </li>
-        <li>
-          <strong class="block">Corporate Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:contact@signinrcm.com">contact@signinrcm.com</a>
-        </li>
-        <li>
-          <strong class="block">Careers</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:careers@signinrcm.com">careers@signinrcm.com</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- USA Office -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">USA Offices</h2>
-      <div class="mt-2 text-gray-700">
-        <h3 class="font-medium">2076 Maryland Oaks Cir, Saint Louis MO 63146</h3>
-        <p>Toll Free: 877-284-7362<br />Local: 786-621-4400<br />Fax: 305-675-2788</p>
-      </div>
-    </div>
-
-    <!-- India Offices -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">India Offices</h2>
-
-      <div class="grid md:grid-cols-2 gap-4 mt-4 text-gray-700">
-        <div>
-          <h3 class="font-medium">Bengaluru</h3>
-          <p>Ground Floor, No 48,<br />Jayanagar 6th Block,<br />Bengaluru - 560082<br />Landmark: Yediyur Lake<br />Phone No: +91 888 666 0617</p>
+            <!-- Challenge 4 -->
+            <div class="bg-gray-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Fraud & Abuse Risk</h4>
+                <p class="text-gray-600">
+                    Incorrect billing, overbilling, or underbilling can lead to financial losses and legal issues. It’s essential to follow 
+                    regulations and guidelines to minimize the risk of fraud.
+                </p>
+            </div>
+            
         </div>
-        <div>
-          <h3 class="font-medium">Chennai</h3>
-          <p>G16 B Spencer Plaza,<br />Chennai - 600002<br />Phone No: +91 888 666 0678</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Hyderabad</h3>
-          <p>Plot No. 12, H. No. 1-10-72/5/2/a,<br />2nd Floor, Chikoti Gardens,<br />Begumpet, Hyderabad - 500016<br />Landmark: Beside Nalli Silks<br />Phone No: +91 888 666 0680</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Tirupati</h3>
-          <p>20-91/D-1, OPP: Hotel S.K.,<br />Tirumala By-Pass Road, Tirupati - 517501<br />Landmark: Opp Saptagiri Grameena Bank<br />Phone No: +91 888 666 0609</p>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
+</section>
 
-</main>
+<!-- Section: Dental Billing Challenges -->
+<section class="bg-gray-50 py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-8">Dental Billing Challenges</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Challenge 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Limited Insurance Coverage</h4>
+                <p class="text-gray-600">
+                    Dental insurance plans often have low annual coverage limits, and many treatments (such as cosmetic procedures) 
+                    aren’t covered. This leads to confusion and unexpected out-of-pocket costs for patients.
+                </p>
+            </div>
 
-  
+            <!-- Challenge 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Procedure Complexity</h4>
+                <p class="text-gray-600">
+                    Dental billing often requires multiple codes for a single procedure, increasing the chance of errors. Additionally, 
+                    mis-coding or down-coding procedures can result in claim denials or reduced reimbursements.
+                </p>
+            </div>
 
-  <!-- Footer Links Section -->
+            <!-- Challenge 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Claim Denials & Delays</h4>
+                <p class="text-gray-600">
+                    Like medical billing, dental claims can be denied or delayed due to missing documentation, coding errors, or insurance disputes. 
+                    This can prolong the time it takes to receive payments.
+                </p>
+            </div>
+
+            <!-- Challenge 4 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Patient Communication</h4>
+                <p class="text-gray-600">
+                    Explaining insurance coverage, patient co-pays, and out-of-pocket expenses can be challenging, resulting in confusion 
+                    and delayed payments from patients.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class="bg-blue-600 text-white py-20">
+    <div class="max-w-6xl mx-auto text-center px-6">
+        <h2 class="text-3xl font-bold mb-6">Overcome Billing Challenges with Our Expertise</h2>
+        <p class="text-lg mb-8">Let us help you navigate the complexities of medical and dental billing. We offer expert services to 
+        reduce denials, improve cash flow, and streamline your billing processes.</p>
+        <a href="#contact" class="bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition-all">Contact Us</a>
+    </div>
+</section>
+
+ <!-- Footer Links Section -->
  <footer>
   <section class="bg-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
@@ -438,6 +371,7 @@
     <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
   </div>
 </footer>
-<script src="scripts.js"></script>
+
+<script src="scripts.js"></script>  
 </body>
 </html>

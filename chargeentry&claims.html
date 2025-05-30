@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIGNIN RCM</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargeentry</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="bg-gray-50">
-
-<header class="bg-white shadow-md sticky top-0 z-50">
+<body>
+    <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
@@ -217,185 +215,143 @@
   </div>
 </nav>
 </header>
-
 <main>
-  <!-- Logo -->
-<img src="images/logo3.JPG" alt="Logo" class="w-full h-auto mb-8" />
-
-<!-- Contact Form Section -->
-<div class="max-w-3xl mx-auto p-6 bg-white shadow rounded-lg">
-  <h2 class="text-2xl font-semibold mb-4">Looking for Medical or Dental RCM Support?</h2>
-  <p class="mb-6">Fill out the form below to be connected with a Medusind Business Specialist who will discuss your needs in detail.</p>
-
-  <div class="bg-blue-50 p-4 rounded mb-6">
-    <p><strong>Are you a patient?</strong> If you're a patient with a billing question, please mail us at the <a href="#" class="text-blue-600 underline">Patient Support page</a>.</p>
-  </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-    <input type="hidden" name="access_key" value="cfea687b-2ae0-44f2-b928-7792b0fcd594">
-    <input type="hidden" name="redirect" value="home.html" />
-
-    <!-- Title -->
-    <div>
-      <label for="title" class="block font-medium">Title*</label>
-      <select id="title" name="title" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Dr.</option>
-        <option>Mr.</option>
-        <option>Ms.</option>
-        <option>Mrs.</option>
-        <option>Other</option>
-      </select>
+    <!-- Section: Introduction -->
+<section class="bg-blue-600 text-white py-20">
+    <div class="max-w-6xl mx-auto text-center px-6">
+        <h2 class="text-3xl font-bold mb-6">Charge Entry and Claims Process</h2>
+        <p class="text-lg md:text-xl mb-8">
+            Accurate charge entry and claim submissions are crucial steps in the revenue cycle. Ensuring these are done correctly helps avoid denials and delays in reimbursement.
+        </p>
     </div>
+</section>
 
-    <!-- Name -->
-    <div>
-      <label for="firstName" class="block font-medium">Name*</label>
-      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 rounded p-2" />
+<!-- Section: What is Charge Entry? -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-6">What is Charge Entry?</h3>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+            Charge entry involves inputting the correct billing codes and charges for services rendered by healthcare providers. This is the foundation for accurate claims submissions and timely reimbursement.
+        </p>
     </div>
+</section>
 
-    <!-- Email -->
-    <div>
-      <label for="email" class="block font-medium">Email*</label>
-      <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Phone -->
-    <div>
-      <label for="phone" class="block font-medium">Phone*</label>
-      <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- State -->
-    <div>
-      <label for="state" class="block font-medium">State*</label>
-      <input type="text" id="state" name="state" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Specialty -->
-    <div>
-      <label for="specialty" class="block font-medium">Specialty*</label>
-      <select id="specialty" name="specialty" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Medical</option>
-        <option>Dental</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Practice Name -->
-    <div>
-      <label for="practiceName" class="block font-medium">Practice Name*</label>
-      <input type="text" id="practiceName" name="practiceName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- RCM Outsourced -->
-    <div>
-      <label for="rcmOutsourced" class="block font-medium">RCM Outsourced?*</label>
-      <select id="rcmOutsourced" name="rcmOutsourced" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Considering</option>
-      </select>
-    </div>
-
-    <!-- PMS -->
-    <div>
-      <label for="pms" class="block font-medium">Practice Management System (PMS)*</label>
-      <select id="pms" name="pms" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Epic</option>
-        <option>Cerner</option>
-        <option>eClinicalWorks</option>
-        <option>NextGen</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Message -->
-    <div>
-      <label for="message" class="block font-medium">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Optional: share any specific questions or requirements..." class="w-full border border-gray-300 rounded p-2"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
-    <p class="text-sm text-gray-500">* Required fields</p>
-  </form>
-</div>
-
-<!-- Contact Info Section -->
-<div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg">
-  <h1 class="text-2xl font-semibold mb-4">Looking for another way to connect?</h1>
-  <p class="mb-6">Explore more ways to get in touch with <strong>SIGNIN RCM</strong>.</p>
-
-  <div class="space-y-6">
-    <!-- Contact Details -->
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>
-          <strong class="block">Medical Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:sales@signinrcm.com">sales@signinrcm.com</a><br />
-          Phone: 877-741-4573
-        </li>
-        <li>
-          <strong class="block">Dental Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:dental@signinrcm.com">dental@signinrcm.com</a><br />
-          Phone: 800-407-0106
-        </li>
-        <li>
-          <strong class="block">Corporate Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:contact@signinrcm.com">contact@signinrcm.com</a>
-        </li>
-        <li>
-          <strong class="block">Careers</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:careers@signinrcm.com">careers@signinrcm.com</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- USA Office -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">USA Offices</h2>
-      <div class="mt-2 text-gray-700">
-        <h3 class="font-medium">2076 Maryland Oaks Cir, Saint Louis MO 63146</h3>
-        <p>Toll Free: 877-284-7362<br />Local: 786-621-4400<br />Fax: 305-675-2788</p>
-      </div>
-    </div>
-
-    <!-- India Offices -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">India Offices</h2>
-
-      <div class="grid md:grid-cols-2 gap-4 mt-4 text-gray-700">
-        <div>
-          <h3 class="font-medium">Bengaluru</h3>
-          <p>Ground Floor, No 48,<br />Jayanagar 6th Block,<br />Bengaluru - 560082<br />Landmark: Yediyur Lake<br />Phone No: +91 888 666 0617</p>
+<!-- Section: Key Steps in Charge Entry -->
+<section class="py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-6">Key Steps in Charge Entry</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Step 1 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step 1: Gather Service Details</h4>
+                <p class="text-gray-700">
+                    Collect the details of the services provided to the patient, including procedure codes, diagnosis codes, and any other necessary information from the healthcare provider.
+                </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step 2: Code Selection</h4>
+                <p class="text-gray-700">
+                    Select the appropriate ICD-10, CPT, and HCPCS codes based on the diagnosis and procedures performed. Accurate coding ensures proper reimbursement.
+                </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step 3: Charge Entry in System</h4>
+                <p class="text-gray-700">
+                    Input the codes and charge information into the practice management or billing system. Ensure all information is accurate and complete.
+                </p>
+            </div>
         </div>
-        <div>
-          <h3 class="font-medium">Chennai</h3>
-          <p>G16 B Spencer Plaza,<br />Chennai - 600002<br />Phone No: +91 888 666 0678</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Hyderabad</h3>
-          <p>Plot No. 12, H. No. 1-10-72/5/2/a,<br />2nd Floor, Chikoti Gardens,<br />Begumpet, Hyderabad - 500016<br />Landmark: Beside Nalli Silks<br />Phone No: +91 888 666 0680</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Tirupati</h3>
-          <p>20-91/D-1, OPP: Hotel S.K.,<br />Tirumala By-Pass Road, Tirupati - 517501<br />Landmark: Opp Saptagiri Grameena Bank<br />Phone No: +91 888 666 0609</p>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
+</section>
+
+<!-- Section: What is Claim Submission? -->
+<section class="bg-gray-100 py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-6">What is Claim Submission?</h3>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+            Once charges are entered, claims are generated and submitted to insurance companies for payment. Claim submission includes the claim form (CMS-1500 for outpatient or UB-04 for inpatient) with all required patient and service information.
+        </p>
+    </div>
+</section>
+
+<!-- Section: Key Steps in Claim Submission -->
+<section class="py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-6">Key Steps in Claim Submission</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Step 1 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step 1: Claim Generation</h4>
+                <p class="text-gray-700">
+                    Once charges are entered, the system generates a claim with the necessary details, including patient information, diagnosis, and procedure codes.
+                </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step 2: Review and Validation</h4>
+                <p class="text-gray-700">
+                    Review the claim for accuracy. Check for missing or incorrect information, ensuring that all codes are accurate and correspond to the services provided.
+                </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step 3: Submit to Payer</h4>
+                <p class="text-gray-700">
+                    Submit the claim electronically or via paper to the insurance payer. Ensure submission follows the payer’s guidelines and is done in a timely manner.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section: Common Issues in Charge Entry & Claims -->
+<section class="bg-gray-50 py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-6">Common Issues in Charge Entry & Claims</h3>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+            Common errors in charge entry and claims submission can lead to delays, denials, and lost revenue. Here are some common mistakes to avoid:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Issue 1 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Incorrect Coding</h4>
+                <p class="text-gray-700">
+                    Incorrect codes can lead to claim denials or underpayments. Always verify that the codes selected are accurate and up to date.
+                </p>
+            </div>
+            <!-- Issue 2 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Missing Information</h4>
+                <p class="text-gray-700">
+                    Claims missing important information, such as patient demographics or procedure details, can result in delays and rejections.
+                </p>
+            </div>
+            <!-- Issue 3 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Untimely Submissions</h4>
+                <p class="text-gray-700">
+                    Claims submitted after the payer’s deadline can lead to denials or reduced payments. Always follow submission timelines to ensure timely processing.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section: Call to Action -->
+<section class="bg-yellow-500 text-black py-20">
+    <div class="max-w-6xl mx-auto text-center px-6">
+        <h2 class="text-3xl font-bold mb-6">Optimize Your Charge Entry & Claims Process</h2>
+        <p class="text-lg mb-8">Ensuring accuracy in charge entry and timely claim submissions can improve cash flow and reduce denials. Let us help streamline your process.</p>
+        <a href="#contact" class="bg-blue-600 text-white font-semibold py-2 px-6 rounded-full hover:bg-blue-500 transition-all">Contact Us Today</a>
+    </div>
+</section>
+
 
 </main>
 
-  
-
-  <!-- Footer Links Section -->
+ <!-- Footer Links Section -->
  <footer>
   <section class="bg-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
@@ -438,6 +394,7 @@
     <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
   </div>
 </footer>
+
 <script src="scripts.js"></script>
 </body>
 </html>

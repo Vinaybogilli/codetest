@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="logo.jpg" alt="Logo" />
+    </a>
+
+    <!-- Hamburger menu button - mobile only -->
+    <button id="mobileMenuBtn" class="md:hidden p-2 rounded hover:bg-gray-100 focus:outline-none" aria-label="Toggle menu">
+      <!-- Hamburger icon -->
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+
+    <!-- Navigation (hidden on mobile) -->
+    <nav id="desktopNav" class="hidden md:flex space-x-6 text-base text-gray-700 font-medium">
+
+      <!-- Services -->
+      <div class="relative">
+        <button id="servicesBtn" class="text-base font-medium text-gray-800 hover:text-blue-600">Services</button>
+        <div id="servicesDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600 "> <img src="paymentposting.png" class="h-8 w-8"><span>Eligibility & Benefits Verification</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="priorauthorizations.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Prior Authorizations</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="medicalcoding.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Medical Coding</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="chargeentry&claims.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Charge Entry & Claims</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="services.html"><img src="paymentposting.png" class="h-8 w-8"> <span>All Specialties</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="arfollowup.html"><img src="paymentposting.png" class="h-8 w-8"> <span>AR Follow-up</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="denialManagment.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Denial Management</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="credentaling.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Credentialing</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="medicalbilling.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Medical Billing</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="dentalbilling.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Dental Billing</span></a>
+        </div>
+      </div>
+
+      <!-- Industries -->
+      <div class="relative">
+        <button id="industriesBtn" class="text-base font-medium text-gray-800 hover:text-blue-600">Industries</button>
+        <div id="industriesDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Specialty Practices</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Hospitals</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Clinics</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Dental Practices</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Ambulatory Surgical Centers</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Labs & Diagnostics</span></a>
+        </div>
+      </div>
+
+      <!-- RCM Insights -->
+      <div class="relative">
+        <button id="insightsBtn" class="text-base font-medium text-gray-800 hover:text-blue-600">RCM Insights</button>
+        <div id="insightsDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="what is rcm.html"><img src="paymentposting.png" class="h-8 w-8"> <span>What is RCM?</span></a>
+
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="medicalvsdental.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Medical vs Dental</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="hipaa.html"><img src="paymentposting.png" class="h-8 w-8"> <span>HIPAA, CMS Updates</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="billingchallenges.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Billing Challenges</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="rcmglosary.html"><img src="paymentposting.png" class="h-8 w-8"> <span>RCM Glossary</span></a>
+        </div>
+      </div>
+
+      <!-- Technology -->
+      <div class="relative">
+        <button id="techBtn" class="text-base font-medium text-gray-800 hover:text-blue-600">Technology</button>
+        <div id="techDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>RCM Platform</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>AI & Automation</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Interoperability</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Data Analytics</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Cloud Solutions</span></a>
+        </div>
+      </div>
+
+      <!-- About Us -->
+      <div class="relative">
+        <button id="aboutBtn" class="text-base font-medium text-gray-800 hover:text-blue-600">About Us</button>
+        <div id="aboutDropdown" class="dropdown fixed left-0 top-[64px] w-full min-h-[30vh] bg-white shadow-lg z-40 px-6 py-8 grid grid-cols-2 gap-6 text-lg text-gray-800">
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="company.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Company</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600"><img src="paymentposting.png" class="h-8 w-8"> <span>Leadership</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="careers.html"><img src="paymentposting.png" class="h-8 w-8"> <span>Careers</span></a>
+          <a class="flex items-center space-x-4 text-sm text-gray-700 font-medium hover:text-blue-600" href="contact.html"><img src="paymentposting.png" class="h-8 w-8" href="contact.html"> <span>Contact</span></a>
+        </div>
+      </div>
+
+      <!-- Contact button -->
+      <button onclick="changepage()" class="text-base font-medium text-gray-800 hover:text-blue-600">Contact</button>
+    </nav>
+
+    <!-- CTA button - visible only on md+ -->
+    <div class="hidden md:block">
+      <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Schedule a Demo</a>
+    </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <!-- Mobile Menu Sidebar -->
+<nav id="mobileMenu"
+     class="md:hidden bg-white shadow-lg fixed top-[80px] left-0 right-0 bottom-0 overflow-auto p-6 space-y-6 text-gray-700 font-medium text-base hidden z-50">
+
+  <!-- Services Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      Services
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Eligibility & Benefits Verification</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="priorauthorizations.html"><img src="paymentposting.png" class="h-6 w-6"><span>Prior Authorizations</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="medicalcoding.html"><img src="paymentposting.png" class="h-6 w-6"><span>Medical Coding</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="chargeentry&claims.html"><img src="paymentposting.png" class="h-6 w-6"><span>Charge Entry & Claims</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="services.html"><img src="paymentposting.png" class="h-6 w-6" ><span>All specialities</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="arfollowup.html"><img src="paymentposting.png" class="h-6 w-6"><span>AR Follow-up</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="denialManagment.html"><img src="paymentposting.png" class="h-6 w-6"><span>Denial Management</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="credentaling.html"><img src="paymentposting.png" class="h-6 w-6"><span>Credentialing</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="medicalbilling.html"><img src="paymentposting.png" class="h-6 w-6"><span>Medical Billing</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="dentalbilling.html"><img src="paymentposting.png" class="h-6 w-6"><span>Dental Billing</span></a>
+    </div>
+  </div>
+
+  <!-- Industries Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      Industries
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Specialty Practices</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Hospitals</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Clinics</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Dental Practices</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Ambulatory Surgical Centers</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Labs & Diagnostics</span></a>
+    </div>
+  </div>
+
+  <!-- RCM Insights Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      RCM Insights
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="what is rcm.html"><img src="paymentposting.png" class="h-6 w-6"><span>What is RCM?</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="hipaa.html"><img src="paymentposting.png" class="h-6 w-6"><span>HIPAA, CMS Updates</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="billingchallenges.html"><img src="paymentposting.png" class="h-6 w-6"><span>Billing Challenges</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="rcmglosary.html"><img src="paymentposting.png" class="h-6 w-6"><span>RCM Glossary</span></a>
+    </div>
+  </div>
+
+  <!-- Technology Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      Technology
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>RCM Platform</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>AI & Automation</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Interoperability</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Data Analytics</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600"><img src="paymentposting.png" class="h-6 w-6"><span>Cloud Solutions</span></a>
+    </div>
+  </div>
+
+  <!-- About Us Dropdown -->
+  <div>
+    <button class="mobileDropdownBtn flex justify-between w-full items-center py-2 hover:text-blue-600 focus:outline-none">
+      About Us
+      <svg class="w-4 h-4 ml-2 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="mobileDropdownContent hidden pl-4 pt-2 space-y-2">
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="company.html"><img src="paymentposting.png" class="h-6 w-6"><span>Company</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" ><img src="paymentposting.png" class="h-6 w-6"><span>Leadership</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="careers.html"><img src="paymentposting.png" class="h-6 w-6"><span>Careers</span></a>
+      <a class="flex items-center space-x-2 text-sm hover:text-blue-600" href="contact.html"><img src="paymentposting.png" class="h-6 w-6"><span>Contact</span></a>
+    </div>
+  </div>
+
+  <!-- Contact Button -->
+  <div>
+    <button onclick="changepage()" class="w-full text-left py-2 hover:text-blue-600">Contact</button>
+  </div>
+
+  <!-- Schedule a Demo Button -->
+  <div>
+    <a href="contact.html" class="block bg-blue-600 text-white text-center px-4 py-2 rounded hover:bg-blue-700 transition">Schedule a Demo</a>
+  </div>
+</nav>
+</header>
+
+    <main>
+ <section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-12">
+      Our RCM Solutions Tailored to Your Specialty Practice
+    </h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+      <!-- Ambulance -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/emergency.jpg" alt="Ambulance" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Ambulance</span>
+      </a>
+
+      <!-- Anesthesia -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/anesthesia.jpg" alt="Anesthesia" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Anesthesia</span>
+      </a>
+
+      <!-- Acupuncture -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/acupuncture.jpg" alt="Acupuncture" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Acupuncture</span>
+      </a>
+
+      <!-- Allergy and Asthma -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/allergy.jpg" alt="Allergy and Asthma" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Allergy and Asthma</span>
+      </a>
+
+      <!-- Behavioral Health -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/behavioral health.jpg" alt="Behavioral Health" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Behavioral Health</span>
+      </a>
+
+      <!-- Cardiology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/cardio.jpg" alt="Cardiology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Cardiology</span>
+      </a>
+
+      <!-- Chiropractic -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/chiropractic.jpg" alt="Chiropractic" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Chiropractic</span>
+      </a>
+
+      <!-- Community Health Center -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/communityhc.png" alt="Community Health Center" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Community Health Center</span>
+      </a>
+
+      <!-- Dermatology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/dermatology.jpeg" alt="Dermatology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Dermatology</span>
+      </a>
+
+      <!-- Dental -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/dentalimage.jpg" alt="Dental" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Dental</span>
+      </a>
+
+      <!-- Durable Medical Equipment (DME) -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/dme.jpg" alt="Durable Medical Equipment (DME)" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Durable Medical Equipment (DME)</span>
+      </a>
+
+      <!-- Emergency Department -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/emergency.jpg" alt="Emergency Department" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Emergency Department</span>
+      </a>
+
+      <!-- Emergency Medicine -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/medicine.jpg" alt="Emergency Medicine" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Emergency Medicine</span>
+      </a>
+
+      <!-- Endocrinology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/endocrinology.jpg" alt="Endocrinology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Endocrinology</span>
+      </a>
+
+      <!-- Family Medicine -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/familymedicine.jpg" alt="Family Medicine" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Family Medicine</span>
+      </a>
+
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/fqhc.jpeg" alt="FQHC" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">FQHC</span>
+      </a>
+
+      <!-- Gastroenterology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/gastoenterology.jpg" alt="Gastroenterology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Gastroenterology</span>
+      </a>
+
+      <!-- Hematology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/hemotology.jpg" alt="Hematology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Hematology</span>
+      </a>
+
+      <!-- Home/Palliative Care -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/homecare.jpg" alt="Home/Palliative Care" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Home/Palliative Care</span>
+      </a>
+
+      <!-- Infectious Disease -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/infectious.jpg" alt="Infectious Disease" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Infectious Disease</span>
+      </a>
+
+      <!-- Maternal Fetal -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/meternalfetal.jpg" alt="Maternal Fetal" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Maternal Fetal</span>
+      </a>
+
+      <!-- Medicine -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/medicine.jpg" alt="Medicine" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Medicine</span>
+      </a>
+
+      <!-- Multi-Specialty -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/doctorimage.jpg" alt="Multi-Specialty" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Multi-Specialty</span>
+      </a>
+
+      <!-- Nephrology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/nephrology.jpg" alt="Nephrology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Nephrology</span>
+      </a>
+
+      <!-- OBGYN -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/obgyn.jpg" alt="OBGYN" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">OBGYN</span>
+      </a>
+
+      <!-- Occupational -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/occupational.jpg" alt="Occupational" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Occupational</span>
+      </a>
+
+      <!-- Oncology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/oncology.jpg" alt="Oncology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Oncology</span>
+      </a>
+
+      <!-- Opthalmology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/ophthalmology.jpeg" alt="Opthalmology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Opthalmology</span>
+      </a>
+
+      <!-- Orthopedic -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/orthopedic.jpg" alt="Orthopedic" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Orthopedic</span>
+      </a>
+
+      <!-- Osteopathic -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/osteopatic.jpg" alt="Osteopathic" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Osteopathic</span>
+      </a>
+
+      <!-- Otolaryngology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/otolaryngology.jpg" alt="Otolaryngology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Otolaryngology</span>
+      </a>
+
+      <!-- Pain Medicine -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/painmedicine.jpg" alt="Pain Medicine" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Pain Medicine</span>
+      </a>
+
+      <!-- Pathology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/pathology.jpg" alt="Pathology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Pathology</span>
+      </a>
+
+      <!-- Pediatric Medicine -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/pediatric.jpg" alt="Pediatric Medicine" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Pediatric Medicine</span>
+      </a>
+
+      <!-- Plastic and Reconstructive Surgery -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/plastic and reconstructive surgery.jpg" alt="Plastic and Reconstructive Surgery" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Plastic and Reconstructive Surgery</span>
+      </a>
+
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/podiatry.jpg" alt="Podiatry" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Podiatry</span>
+      </a>
+
+      <!-- Psychiatry and Psychology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/AnastesiaPsychiatry and Psychology.jpg" alt="Psychiatry and Psychology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Psychiatry and Psychology</span>
+      </a>
+
+      <!-- Physical Therapy -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/physical-therapy.jpg" alt="Physical Therapy" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Physical Therapy</span>
+      </a>
+
+      <!-- Pulmonology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/pulmology.jpg" alt="Pulmonology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Pulmonology</span>
+      </a>
+
+      <!-- Radiology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/radiology.jpg" alt="Radiology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Radiology</span>
+      </a>
+
+      <!-- Surgery -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/surgery.jpg" alt="Surgery" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Surgery</span>
+      </a>
+
+      <!-- Rheumatology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/rhemotology.jpg" alt="Rheumatology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Rheumatology</span>
+      </a>
+
+      <!-- Urology -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/urology.jpg" alt="Urology" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Urology</span>
+      </a>
+
+      <!-- Wound Care -->
+      <a href="#" class="flex flex-col items-center space-y-3 text-sm text-gray-700 font-medium hover:bg-blue-50 transition-all p-5 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+        <img src="images/servicesimages/wound.jpeg" alt="Wound Care" class="h-16 w-16 rounded-full shadow-md object-cover transition-all transform hover:scale-110">
+        <span class="mt-2 text-lg font-semibold text-gray-800">Wound Care</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact Button -->
+<div id="cont" class="text-center py-8">
+  <h3 class="text-3xl font-semibold mb-4">Collect every dollar you deserve with SIGNIN RCM</h3>
+  <button id="btn" onclick="changepage()" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-full shadow-xl hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+    Talk to our Expert
+  </button>
+</div>
+    </main>
+
+<footer>
+  <section class="bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">Services</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Medical Billing</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">AR Follow-up</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Payment Posting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">Industries</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Orthopedics</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Dentistry</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Cardiology</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">About Us</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Our Mission</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Careers</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Certifications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 uppercase tracking-wide">Social</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">LinkedIn</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Twitter</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-400 transition">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-gray-900 text-gray-300 py-6 text-center text-sm">
+    <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIGNIN RCM</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Follow-Up Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
   <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Custom Styling */
+        .hero-bg {
+            background-image: url('images/servicesimages/ar-followup.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-header {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #1F2937;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .card-hover:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
 
-<header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
@@ -218,184 +255,121 @@
 </nav>
 </header>
 
-<main>
-  <!-- Logo -->
-<img src="images/logo3.JPG" alt="Logo" class="w-full h-auto mb-8" />
+    <!-- Hero Section -->
+    <section class="relative text-white py-40 hero-bg">
+        <!-- Dark overlay for better text contrast -->
+        <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Dark overlay -->
 
-<!-- Contact Form Section -->
-<div class="max-w-3xl mx-auto p-6 bg-white shadow rounded-lg">
-  <h2 class="text-2xl font-semibold mb-4">Looking for Medical or Dental RCM Support?</h2>
-  <p class="mb-6">Fill out the form below to be connected with a Medusind Business Specialist who will discuss your needs in detail.</p>
-
-  <div class="bg-blue-50 p-4 rounded mb-6">
-    <p><strong>Are you a patient?</strong> If you're a patient with a billing question, please mail us at the <a href="#" class="text-blue-600 underline">Patient Support page</a>.</p>
-  </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-    <input type="hidden" name="access_key" value="cfea687b-2ae0-44f2-b928-7792b0fcd594">
-    <input type="hidden" name="redirect" value="home.html" />
-
-    <!-- Title -->
-    <div>
-      <label for="title" class="block font-medium">Title*</label>
-      <select id="title" name="title" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Dr.</option>
-        <option>Mr.</option>
-        <option>Ms.</option>
-        <option>Mrs.</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Name -->
-    <div>
-      <label for="firstName" class="block font-medium">Name*</label>
-      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Email -->
-    <div>
-      <label for="email" class="block font-medium">Email*</label>
-      <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Phone -->
-    <div>
-      <label for="phone" class="block font-medium">Phone*</label>
-      <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- State -->
-    <div>
-      <label for="state" class="block font-medium">State*</label>
-      <input type="text" id="state" name="state" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Specialty -->
-    <div>
-      <label for="specialty" class="block font-medium">Specialty*</label>
-      <select id="specialty" name="specialty" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Medical</option>
-        <option>Dental</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Practice Name -->
-    <div>
-      <label for="practiceName" class="block font-medium">Practice Name*</label>
-      <input type="text" id="practiceName" name="practiceName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- RCM Outsourced -->
-    <div>
-      <label for="rcmOutsourced" class="block font-medium">RCM Outsourced?*</label>
-      <select id="rcmOutsourced" name="rcmOutsourced" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Considering</option>
-      </select>
-    </div>
-
-    <!-- PMS -->
-    <div>
-      <label for="pms" class="block font-medium">Practice Management System (PMS)*</label>
-      <select id="pms" name="pms" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Epic</option>
-        <option>Cerner</option>
-        <option>eClinicalWorks</option>
-        <option>NextGen</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Message -->
-    <div>
-      <label for="message" class="block font-medium">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Optional: share any specific questions or requirements..." class="w-full border border-gray-300 rounded p-2"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
-    <p class="text-sm text-gray-500">* Required fields</p>
-  </form>
-</div>
-
-<!-- Contact Info Section -->
-<div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg">
-  <h1 class="text-2xl font-semibold mb-4">Looking for another way to connect?</h1>
-  <p class="mb-6">Explore more ways to get in touch with <strong>SIGNIN RCM</strong>.</p>
-
-  <div class="space-y-6">
-    <!-- Contact Details -->
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>
-          <strong class="block">Medical Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:sales@signinrcm.com">sales@signinrcm.com</a><br />
-          Phone: 877-741-4573
-        </li>
-        <li>
-          <strong class="block">Dental Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:dental@signinrcm.com">dental@signinrcm.com</a><br />
-          Phone: 800-407-0106
-        </li>
-        <li>
-          <strong class="block">Corporate Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:contact@signinrcm.com">contact@signinrcm.com</a>
-        </li>
-        <li>
-          <strong class="block">Careers</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:careers@signinrcm.com">careers@signinrcm.com</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- USA Office -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">USA Offices</h2>
-      <div class="mt-2 text-gray-700">
-        <h3 class="font-medium">2076 Maryland Oaks Cir, Saint Louis MO 63146</h3>
-        <p>Toll Free: 877-284-7362<br />Local: 786-621-4400<br />Fax: 305-675-2788</p>
-      </div>
-    </div>
-
-    <!-- India Offices -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">India Offices</h2>
-
-      <div class="grid md:grid-cols-2 gap-4 mt-4 text-gray-700">
-        <div>
-          <h3 class="font-medium">Bengaluru</h3>
-          <p>Ground Floor, No 48,<br />Jayanagar 6th Block,<br />Bengaluru - 560082<br />Landmark: Yediyur Lake<br />Phone No: +91 888 666 0617</p>
+        <!-- Content container -->
+        <div class="max-w-6xl mx-auto text-center px-6 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Accounts Receivable (AR) Follow-Up Services</h1>
+            <p class="text-lg md:text-xl">
+                Maximize your practice's revenue with our expert AR follow-up services. We track outstanding balances and communicate directly with insurance companies and patients to ensure payments are received promptly.
+            </p>
         </div>
-        <div>
-          <h3 class="font-medium">Chennai</h3>
-          <p>G16 B Spencer Plaza,<br />Chennai - 600002<br />Phone No: +91 888 666 0678</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Hyderabad</h3>
-          <p>Plot No. 12, H. No. 1-10-72/5/2/a,<br />2nd Floor, Chikoti Gardens,<br />Begumpet, Hyderabad - 500016<br />Landmark: Beside Nalli Silks<br />Phone No: +91 888 666 0680</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Tirupati</h3>
-          <p>20-91/D-1, OPP: Hotel S.K.,<br />Tirumala By-Pass Road, Tirupati - 517501<br />Landmark: Opp Saptagiri Grameena Bank<br />Phone No: +91 888 666 0609</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-</main>
+    <!-- Introduction Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header">Why Choose Our AR Follow-Up Services?</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+                AR follow-up is critical to maintaining positive cash flow in your practice. Our team ensures all outstanding payments are followed up on in a timely manner, helping you reduce aging accounts and optimize revenue collection.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Efficient Payment Collection</h3>
+                    <p class="text-gray-600">Our team ensures that all outstanding claims are followed up with the payer and patients to accelerate the collection process and reduce aging receivables.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Improved Cash Flow</h3>
+                    <p class="text-gray-600">With systematic follow-ups, we help optimize your practice’s cash flow, ensuring that you receive payments on time and improve your overall financial health.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Detailed Reporting</h3>
+                    <p class="text-gray-600">We provide transparent reports detailing outstanding claims, payment status, and follow-up actions taken, giving you full visibility into your AR process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  
+    <!-- AR Follow-Up Process Section -->
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header">Our AR Follow-Up Process</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+                We follow a systematic process to ensure all outstanding payments are addressed. Our team proactively follows up with both insurance companies and patients until payment is collected.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 1: Claim Review</h3>
+                    <p class="text-gray-600">We begin by reviewing all unpaid claims to identify outstanding balances, denied claims, and claims that need additional documentation or follow-up.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 2: Insurance Follow-Up</h3>
+                    <p class="text-gray-600">Our team contacts insurance companies to inquire about claim status, request additional information, and resolve payment delays.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 3: Patient Follow-Up</h3>
+                    <p class="text-gray-600">We communicate directly with patients for any out-of-pocket balances, ensuring timely payments and offering flexible payment options when necessary.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 4: Payment Posting</h3>
+                    <p class="text-gray-600">Once payments are received, we post them accurately to patient accounts and ensure the AR ledger is updated accordingly.</p>
+                </div>
+                <!-- Step 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 5: Reporting & Analysis</h3>
+                    <p class="text-gray-600">We provide you with detailed reports on all AR activity, helping you track progress and identify trends to improve your future collections process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer Links Section -->
+    <!-- AR Follow-Up Benefits Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header">Benefits of Our AR Follow-Up Services</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+                Our AR follow-up services provide a comprehensive solution for managing your practice’s receivables, improving collections, and ensuring financial stability.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Reduce Aging AR</h3>
+                    <p class="text-gray-600">By proactively following up on outstanding claims, we help reduce the aging of your accounts receivable, ensuring payments are received promptly.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Increase Revenue</h3>
+                    <p class="text-gray-600">Our systematic follow-up process leads to a higher recovery rate of outstanding claims, ultimately increasing your practice’s revenue and cash flow.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Save Time & Resources</h3>
+                    <p class="text-gray-600">We take over the time-consuming process of AR follow-up, allowing you to focus more on patient care while we handle the financial side.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="text-black py-20">
+        <div class="max-w-6xl mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold mb-6">Ready to Optimize Your AR Follow-Up?</h2>
+            <p class="text-lg mb-8">Let us help you reduce aging AR and improve your cash flow. Our team is ready to take over your AR follow-up, so you can focus on what matters most: patient care.</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+     <!-- Footer Links Section -->
  <footer>
   <section class="bg-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
@@ -438,6 +412,8 @@
     <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
   </div>
 </footer>
+
 <script src="scripts.js"></script>
 </body>
+
 </html>

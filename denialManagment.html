@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIGNIN RCM</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denial Management Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
   <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom Styling */
+        .hero-bg {
+            background-image: url('images/servicesimages/denial-management.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-header {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #1F2937;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .card-hover:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
 
-<header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
@@ -218,184 +254,121 @@
 </nav>
 </header>
 
-<main>
-  <!-- Logo -->
-<img src="images/logo3.JPG" alt="Logo" class="w-full h-auto mb-8" />
+    <!-- Hero Section -->
+    <section class="relative text-white py-40 hero-bg">
+        <!-- Dark overlay for better text contrast -->
+        <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Dark overlay -->
 
-<!-- Contact Form Section -->
-<div class="max-w-3xl mx-auto p-6 bg-white shadow rounded-lg">
-  <h2 class="text-2xl font-semibold mb-4">Looking for Medical or Dental RCM Support?</h2>
-  <p class="mb-6">Fill out the form below to be connected with a Medusind Business Specialist who will discuss your needs in detail.</p>
-
-  <div class="bg-blue-50 p-4 rounded mb-6">
-    <p><strong>Are you a patient?</strong> If you're a patient with a billing question, please mail us at the <a href="#" class="text-blue-600 underline">Patient Support page</a>.</p>
-  </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-    <input type="hidden" name="access_key" value="cfea687b-2ae0-44f2-b928-7792b0fcd594">
-    <input type="hidden" name="redirect" value="home.html" />
-
-    <!-- Title -->
-    <div>
-      <label for="title" class="block font-medium">Title*</label>
-      <select id="title" name="title" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Dr.</option>
-        <option>Mr.</option>
-        <option>Ms.</option>
-        <option>Mrs.</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Name -->
-    <div>
-      <label for="firstName" class="block font-medium">Name*</label>
-      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Email -->
-    <div>
-      <label for="email" class="block font-medium">Email*</label>
-      <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Phone -->
-    <div>
-      <label for="phone" class="block font-medium">Phone*</label>
-      <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- State -->
-    <div>
-      <label for="state" class="block font-medium">State*</label>
-      <input type="text" id="state" name="state" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- Specialty -->
-    <div>
-      <label for="specialty" class="block font-medium">Specialty*</label>
-      <select id="specialty" name="specialty" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Medical</option>
-        <option>Dental</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Practice Name -->
-    <div>
-      <label for="practiceName" class="block font-medium">Practice Name*</label>
-      <input type="text" id="practiceName" name="practiceName" required class="w-full border border-gray-300 rounded p-2" />
-    </div>
-
-    <!-- RCM Outsourced -->
-    <div>
-      <label for="rcmOutsourced" class="block font-medium">RCM Outsourced?*</label>
-      <select id="rcmOutsourced" name="rcmOutsourced" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Considering</option>
-      </select>
-    </div>
-
-    <!-- PMS -->
-    <div>
-      <label for="pms" class="block font-medium">Practice Management System (PMS)*</label>
-      <select id="pms" name="pms" required class="w-full border border-gray-300 rounded p-2">
-        <option value="">--select an item--</option>
-        <option>Epic</option>
-        <option>Cerner</option>
-        <option>eClinicalWorks</option>
-        <option>NextGen</option>
-        <option>Other</option>
-      </select>
-    </div>
-
-    <!-- Message -->
-    <div>
-      <label for="message" class="block font-medium">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Optional: share any specific questions or requirements..." class="w-full border border-gray-300 rounded p-2"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
-    <p class="text-sm text-gray-500">* Required fields</p>
-  </form>
-</div>
-
-<!-- Contact Info Section -->
-<div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg">
-  <h1 class="text-2xl font-semibold mb-4">Looking for another way to connect?</h1>
-  <p class="mb-6">Explore more ways to get in touch with <strong>SIGNIN RCM</strong>.</p>
-
-  <div class="space-y-6">
-    <!-- Contact Details -->
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>
-          <strong class="block">Medical Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:sales@signinrcm.com">sales@signinrcm.com</a><br />
-          Phone: 877-741-4573
-        </li>
-        <li>
-          <strong class="block">Dental Sales Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:dental@signinrcm.com">dental@signinrcm.com</a><br />
-          Phone: 800-407-0106
-        </li>
-        <li>
-          <strong class="block">Corporate Inquiries</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:contact@signinrcm.com">contact@signinrcm.com</a>
-        </li>
-        <li>
-          <strong class="block">Careers</strong>
-          Email: <a class="text-blue-600 underline" href="mailto:careers@signinrcm.com">careers@signinrcm.com</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- USA Office -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">USA Offices</h2>
-      <div class="mt-2 text-gray-700">
-        <h3 class="font-medium">2076 Maryland Oaks Cir, Saint Louis MO 63146</h3>
-        <p>Toll Free: 877-284-7362<br />Local: 786-621-4400<br />Fax: 305-675-2788</p>
-      </div>
-    </div>
-
-    <!-- India Offices -->
-    <div>
-      <h2 class="text-xl font-semibold mt-6">India Offices</h2>
-
-      <div class="grid md:grid-cols-2 gap-4 mt-4 text-gray-700">
-        <div>
-          <h3 class="font-medium">Bengaluru</h3>
-          <p>Ground Floor, No 48,<br />Jayanagar 6th Block,<br />Bengaluru - 560082<br />Landmark: Yediyur Lake<br />Phone No: +91 888 666 0617</p>
+        <!-- Content container -->
+        <div class="max-w-6xl mx-auto text-center px-6 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Denial Management Services</h1>
+            <p class="text-lg md:text-xl">
+                Let us help you recover denied claims quickly and efficiently. Our denial management services ensure that your practice minimizes revenue loss due to claim rejections.
+            </p>
         </div>
-        <div>
-          <h3 class="font-medium">Chennai</h3>
-          <p>G16 B Spencer Plaza,<br />Chennai - 600002<br />Phone No: +91 888 666 0678</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Hyderabad</h3>
-          <p>Plot No. 12, H. No. 1-10-72/5/2/a,<br />2nd Floor, Chikoti Gardens,<br />Begumpet, Hyderabad - 500016<br />Landmark: Beside Nalli Silks<br />Phone No: +91 888 666 0680</p>
-        </div>
-        <div>
-          <h3 class="font-medium">Tirupati</h3>
-          <p>20-91/D-1, OPP: Hotel S.K.,<br />Tirumala By-Pass Road, Tirupati - 517501<br />Landmark: Opp Saptagiri Grameena Bank<br />Phone No: +91 888 666 0609</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-</main>
+    <!-- Introduction Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header">Why Choose Our Denial Management Services?</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+                Denied claims are a significant challenge for healthcare providers. Our expert team handles the complexities of denials, appeals, and follow-ups to ensure that your practice gets paid quickly and accurately.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Maximize Revenue</h3>
+                    <p class="text-gray-600">We work tirelessly to resolve claim denials and minimize payment delays, ensuring that your practice receives every dollar owed.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Efficient Appeals Process</h3>
+                    <p class="text-gray-600">We have a proven system for filing timely appeals to overturn denials, resulting in faster resolution and improved cash flow.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Reduce Administrative Burden</h3>
+                    <p class="text-gray-600">Let us handle the complexity of denial management, so your staff can focus on patient care and other critical functions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  
+    <!-- Denial Management Process Section -->
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header">Our Denial Management Process</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+                Our process is designed to minimize the impact of denied claims. We ensure fast resolution through detailed follow-ups and accurate appeal submissions.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 1: Denial Identification</h3>
+                    <p class="text-gray-600">We begin by reviewing your claims to identify denied or rejected claims, ensuring no payment is overlooked.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 2: Root Cause Analysis</h3>
+                    <p class="text-gray-600">We analyze the cause of each denial, whether due to incorrect coding, missing information, or other factors, to formulate an effective appeal strategy.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 3: Appeal Preparation</h3>
+                    <p class="text-gray-600">Our team prepares the necessary documentation and submits the appeal, ensuring all information is complete and compliant with payer guidelines.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 4: Follow-Up</h3>
+                    <p class="text-gray-600">We regularly follow up on your appeals, ensuring timely responses and reducing the chances of further delays in payments.</p>
+                </div>
+                <!-- Step 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 5: Payment Resolution</h3>
+                    <p class="text-gray-600">Once the appeal is successful, we ensure that the payment is processed and deposited into your account, ensuring financial clarity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer Links Section -->
+    <!-- Denial Management Benefits Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header">Why Rely on Our Denial Management Services?</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
+                Denied claims are inevitable, but with our denial management expertise, you can recover lost revenue and streamline your practice's billing process.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Increased Cash Flow</h3>
+                    <p class="text-gray-600">Our timely and effective denial management strategy ensures faster resolution and minimizes the time between service and payment.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Reduced Operational Costs</h3>
+                    <p class="text-gray-600">By outsourcing denial management to experts, you reduce the cost of internal resources and avoid costly billing errors.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Improved Denial Recovery</h3>
+                    <p class="text-gray-600">Our specialized knowledge of insurance guidelines results in a higher rate of successful appeals and faster denial resolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="text-black py-20">
+        <div class="max-w-6xl mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold mb-6">Ready to Streamline Your Denial Management?</h2>
+            <p class="text-lg mb-8">Let our experts help recover your denied claims and improve your cash flow. Our team is here to provide timely, efficient denial management services.</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+ <!-- Footer Links Section -->
  <footer>
   <section class="bg-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
@@ -438,6 +411,9 @@
     <p>&copy; 2025 SIGNIN RCM. All rights reserved.</p>
   </div>
 </footer>
+
 <script src="scripts.js"></script>
+
 </body>
+
 </html>
