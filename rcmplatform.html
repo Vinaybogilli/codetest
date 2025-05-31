@@ -1,48 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental Billing Services</title>
-     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-     <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
-     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-        .section-header {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #2d3748;
-        }
-        .highlight-text {
-            color: #3182ce;
-            font-weight: bold;
-        }
-        .cta-button {
-            background-color: #3182ce;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 9999px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #2b6cb0;
-        }
-        .card-hover:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body class="bg-gray-50">
 
-<header class="bg-white shadow-md sticky top-0 z-50">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revenue Cycle Management Platform</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/jpg" href="images/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero Section Custom Background */
+    .hero-bg {
+      background-image: url('images/rcmplatformbg.avif'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
@@ -249,130 +230,97 @@
 </nav>
 </header>
 
-
-<main>
-<!-- Header Section -->
-<section class="relative text-white py-40" style="background-image: url('images/servicesimages/dentalimage.jpg'); background-size: cover; background-position: center;">
-    <!-- Dark overlay for better text contrast -->
-    <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Dark overlay -->
-
-    <!-- Content container -->
-    <div class="max-w-6xl mx-auto text-center px-6 relative z-10">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Dental Billing Services</h1>
-        <p class="text-lg md:text-xl">
-            Our comprehensive dental billing services ensure that your practice gets paid promptly and efficiently. 
-            From accurate coding to patient invoicing, we handle it all.
-        </p>
+  <!-- Hero Section -->
+  <section class="hero-bg text-white py-32 bg-no-repeat bg-cover bg-center">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl font-bold mb-6">Maximize Your Revenue with Our RCM Platform</h1>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">Streamline your billing, claims, and revenue cycle operations to boost collections and reduce administrative costs.</p>
+      
     </div>
-</section>
+  </section>
 
+  <!-- Overview Section -->
+  <section id="overview" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">What is Revenue Cycle Management (RCM)?</h2>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">RCM is the process of managing the financial aspects of healthcare services, from patient intake to payment. A comprehensive RCM platform helps healthcare providers reduce administrative burden, optimize billing processes, and improve cash flow.</p>
+    </div>
+  </section>
 
-<!-- Introduction Section -->
-<section class="py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="section-header">Why Choose Our Dental Billing Services?</h2>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
-            Dental billing is a crucial component of your practice’s financial health. We specialize in accurate coding, timely claim submissions, and efficient collections to help you maximize revenue and reduce administrative burdens.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <!-- Benefit 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Maximize Revenue</h3>
-                <p class="text-gray-600">Our team ensures that every procedure is coded correctly and submitted on time, reducing claim denials and maximizing reimbursements.</p>
-            </div>
-            <!-- Benefit 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Reduce Administrative Work</h3>
-                <p class="text-gray-600">Focus on patient care while we take care of all billing tasks—from claim submission to payment posting and follow-ups.</p>
-            </div>
-            <!-- Benefit 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Improve Cash Flow</h3>
-                <p class="text-gray-600">With accurate billing and prompt follow-ups, we help improve your practice’s cash flow, ensuring payments are received on time.</p>
-            </div>
+  <!-- Key Features Section -->
+  <section id="features" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Key Features of Our RCM Platform</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Automated Billing & Coding</h3>
+          <p>Our platform automates the coding and billing processes, reducing human error and speeding up payment cycles while ensuring accuracy and compliance with regulations.</p>
         </div>
-    </div>
-</section>
-
-<!-- Dental Billing Process Section -->
-<section class="bg-gray-100 py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="section-header">Our Dental Billing Process</h2>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
-            Our streamlined process ensures that your practice's billing is efficient, transparent, and error-free. Here's how it works:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <!-- Step 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 1: Patient Information Collection</h3>
-                <p class="text-gray-600">We gather essential patient information, including insurance details and demographics, to ensure the billing process runs smoothly.</p>
-            </div>
-            <!-- Step 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 2: Code Assignment</h3>
-                <p class="text-gray-600">Our certified coders assign accurate codes for dental procedures to ensure that claims are submitted correctly and payments are maximized.</p>
-            </div>
-            <!-- Step 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 3: Claim Submission</h3>
-                <p class="text-gray-600">We submit claims to insurance companies on behalf of your practice, ensuring that all information is accurate and compliant with industry standards.</p>
-            </div>
-            <!-- Step 4 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 4: Payment Posting</h3>
-                <p class="text-gray-600">Once payment is received, we post the payments accurately to patient accounts and update your records to ensure everything is in order.</p>
-            </div>
-            <!-- Step 5 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 5: Patient Billing</h3>
-                <p class="text-gray-600">We handle patient billing for any remaining balances, ensuring clear communication and ease of payment through various channels.</p>
-            </div>
-            <!-- Step 6 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 6: Denial Management</h3>
-                <p class="text-gray-600">We manage and resolve denied claims, ensuring that any issues are addressed promptly and efficiently, reducing the time between service and payment.</p>
-            </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Real-Time Claims Management</h3>
+          <p>Track and manage claims in real-time, ensuring quick resolution of any issues and faster payments. The platform integrates with insurance carriers for seamless claim submission.</p>
         </div>
-    </div>
-</section>
-
-<!-- Dental Billing Benefits Section -->
-<section class="py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="section-header">Why Rely on Our Dental Billing Services?</h2>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
-            Dental practices face unique challenges when it comes to billing and insurance claims. We offer specialized services designed to meet the needs of your practice:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <!-- Benefit 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Expert Dental Coders</h3>
-                <p class="text-gray-600">Our team is experienced in dental coding, ensuring accuracy and compliance with all insurance requirements.</p>
-            </div>
-            <!-- Benefit 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">End-to-End Billing Solutions</h3>
-                <p class="text-gray-600">From claim submission to patient follow-ups, we provide comprehensive billing solutions that take care of everything.</p>
-            </div>
-            <!-- Benefit 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Timely and Accurate Payments</h3>
-                <p class="text-gray-600">We ensure timely claim submissions and accurate payment processing to optimize your practice's cash flow.</p>
-            </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Payment Posting & Reconciliation</h3>
+          <p>Automatically post and reconcile payments, ensuring accurate tracking of revenue and reducing manual effort in verifying payments from insurance and patients.</p>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Call-to-Action Section -->
-<section class=" text-black py-20">
-    <div class="max-w-6xl mx-auto text-center px-6">
-        <h2 class="text-3xl font-bold mb-6">Ready to Streamline Your Dental Billing?</h2>
-        <p class="text-lg mb-8">Let us help you optimize your billing process, improve cash flow, and reduce administrative burdens. Our team is ready to assist!</p>
-        <a href="contact.html" class="cta-button">Get Started Today</a>
+  <!-- Benefits Section -->
+  <section id="benefits" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Benefits of Using Our RCM Platform</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Increase Cash Flow</h3>
+          <p>By improving the speed and accuracy of billing and claims processes, our platform helps your organization improve cash flow and reduce delays in payments.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Reduce Administrative Costs</h3>
+          <p>Automation of repetitive tasks and streamlined workflows lead to significant reductions in administrative overhead, saving time and resources.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Improve Compliance</h3>
+          <p>Our RCM platform ensures compliance with the latest healthcare regulations, minimizing the risk of coding errors and billing discrepancies.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Optimize Revenue Cycle</h3>
+          <p>Gain full visibility into your revenue cycle, from patient registration to final payment, and uncover opportunities to improve efficiency and maximize revenue.</p>
+        </div>
+      </div>
     </div>
-</section>
-</main>
- <!-- Footer Links Section -->
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="case-studies" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Case Studies: Transforming Healthcare Revenue Cycles</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Healthcare Provider Success</h3>
+          <p>Our RCM platform helped a major healthcare provider reduce claim rejections by 30% and increase their cash flow by 25% in just six months.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Hospital Revenue Optimization</h3>
+          <p>By automating billing and payment posting, a hospital network was able to reduce administrative costs by 40% and improve collections by 20% year-over-year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="cta" class="text-black py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold mb-4">Ready to Optimize Your Revenue Cycle?</h2>
+      <p class="text-lg mb-8">Get started today and unlock the full potential of your revenue cycle management. Schedule a demo to see how our platform can streamline your operations.</p>
+      <a href="contact.html" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg transition duration-300">Schedule a Demo</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+   <!-- Footer Links Section -->
  <footer>
   <section class="bg-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
@@ -416,6 +364,8 @@
   </div>
 </footer>
 
-<script src="scripts.js"></script>
+  <script src="scripts.js"></script>
+
 </body>
+
 </html>

@@ -1,48 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental Billing Services</title>
-     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-     <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
-     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-        .section-header {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #2d3748;
-        }
-        .highlight-text {
-            color: #3182ce;
-            font-weight: bold;
-        }
-        .cta-button {
-            background-color: #3182ce;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 9999px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #2b6cb0;
-        }
-        .card-hover:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body class="bg-gray-50">
 
-<header class="bg-white shadow-md sticky top-0 z-50">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/jpg" href="images/linkimage.jpg">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero Section Custom Background */
+    .hero-bg {
+      background-image: url('images/patientservicesbg.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+   <header class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 relative">
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2">
@@ -249,130 +228,107 @@
 </nav>
 </header>
 
-
-<main>
-<!-- Header Section -->
-<section class="relative text-white py-40" style="background-image: url('images/servicesimages/dentalimage.jpg'); background-size: cover; background-position: center;">
-    <!-- Dark overlay for better text contrast -->
-    <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Dark overlay -->
-
-    <!-- Content container -->
-    <div class="max-w-6xl mx-auto text-center px-6 relative z-10">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Dental Billing Services</h1>
-        <p class="text-lg md:text-xl">
-            Our comprehensive dental billing services ensure that your practice gets paid promptly and efficiently. 
-            From accurate coding to patient invoicing, we handle it all.
-        </p>
+  <!-- Hero Section -->
+  <section class="hero-bg text-black py-32 bg-no-repeat bg-cover bg-center">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl font-bold mb-6">Comprehensive Patient Services</h1>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">We provide a wide range of services designed to help you achieve and maintain optimal health. Explore our offerings and find the care you need today.</p>
+      <a href="services.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg transition duration-300">Explore Services</a>
     </div>
-</section>
+  </section>
 
+  <!-- Services Overview Section -->
+  <section id="overview" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Services</h2>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">From primary care to specialized treatments, our services are designed to meet your healthcare needs with compassion and expertise.</p>
+    </div>
+  </section>
 
-<!-- Introduction Section -->
-<section class="py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="section-header">Why Choose Our Dental Billing Services?</h2>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
-            Dental billing is a crucial component of your practice’s financial health. We specialize in accurate coding, timely claim submissions, and efficient collections to help you maximize revenue and reduce administrative burdens.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <!-- Benefit 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Maximize Revenue</h3>
-                <p class="text-gray-600">Our team ensures that every procedure is coded correctly and submitted on time, reducing claim denials and maximizing reimbursements.</p>
-            </div>
-            <!-- Benefit 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Reduce Administrative Work</h3>
-                <p class="text-gray-600">Focus on patient care while we take care of all billing tasks—from claim submission to payment posting and follow-ups.</p>
-            </div>
-            <!-- Benefit 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Improve Cash Flow</h3>
-                <p class="text-gray-600">With accurate billing and prompt follow-ups, we help improve your practice’s cash flow, ensuring payments are received on time.</p>
-            </div>
+  <!-- Service Categories Section -->
+  <section id="services" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Our Core Services</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Primary Care</h3>
+          <p>Comprehensive care for individuals of all ages, including preventive health services, routine checkups, and ongoing management of chronic conditions.</p>
+          
         </div>
-    </div>
-</section>
-
-<!-- Dental Billing Process Section -->
-<section class="bg-gray-100 py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="section-header">Our Dental Billing Process</h2>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
-            Our streamlined process ensures that your practice's billing is efficient, transparent, and error-free. Here's how it works:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <!-- Step 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 1: Patient Information Collection</h3>
-                <p class="text-gray-600">We gather essential patient information, including insurance details and demographics, to ensure the billing process runs smoothly.</p>
-            </div>
-            <!-- Step 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 2: Code Assignment</h3>
-                <p class="text-gray-600">Our certified coders assign accurate codes for dental procedures to ensure that claims are submitted correctly and payments are maximized.</p>
-            </div>
-            <!-- Step 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 3: Claim Submission</h3>
-                <p class="text-gray-600">We submit claims to insurance companies on behalf of your practice, ensuring that all information is accurate and compliant with industry standards.</p>
-            </div>
-            <!-- Step 4 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 4: Payment Posting</h3>
-                <p class="text-gray-600">Once payment is received, we post the payments accurately to patient accounts and update your records to ensure everything is in order.</p>
-            </div>
-            <!-- Step 5 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 5: Patient Billing</h3>
-                <p class="text-gray-600">We handle patient billing for any remaining balances, ensuring clear communication and ease of payment through various channels.</p>
-            </div>
-            <!-- Step 6 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Step 6: Denial Management</h3>
-                <p class="text-gray-600">We manage and resolve denied claims, ensuring that any issues are addressed promptly and efficiently, reducing the time between service and payment.</p>
-            </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Specialty Care</h3>
+          <p>Expert care in a variety of specialties, from cardiology to dermatology, ensuring that your specific health needs are met by experienced professionals.</p>
+         
         </div>
-    </div>
-</section>
-
-<!-- Dental Billing Benefits Section -->
-<section class="py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="section-header">Why Rely on Our Dental Billing Services?</h2>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 mb-8">
-            Dental practices face unique challenges when it comes to billing and insurance claims. We offer specialized services designed to meet the needs of your practice:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <!-- Benefit 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Expert Dental Coders</h3>
-                <p class="text-gray-600">Our team is experienced in dental coding, ensuring accuracy and compliance with all insurance requirements.</p>
-            </div>
-            <!-- Benefit 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">End-to-End Billing Solutions</h3>
-                <p class="text-gray-600">From claim submission to patient follow-ups, we provide comprehensive billing solutions that take care of everything.</p>
-            </div>
-            <!-- Benefit 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-hover">
-                <h3 class="text-xl font-semibold text-blue-600 mb-4">Timely and Accurate Payments</h3>
-                <p class="text-gray-600">We ensure timely claim submissions and accurate payment processing to optimize your practice's cash flow.</p>
-            </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Diagnostic Services</h3>
+          <p>Access to advanced diagnostic tools and procedures, including lab tests, imaging, and screenings to ensure accurate diagnosis and timely treatment.</p>
+         
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Resources Section -->
+  <section id="resources" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Patient Resources</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Patient Portal</h3>
+          <p>Access your medical records, schedule appointments, view test results, and communicate with your healthcare provider securely through our online portal.</p>
+         
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Insurance Information</h3>
+          <p>Find detailed information about insurance providers we accept, and understand your coverage options to make your healthcare experience as smooth as possible.</p>
+          
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Billing & Payments</h3>
+          <p>Learn about our billing process, payment options, and find answers to frequently asked questions about your medical bills and insurance claims.</p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <!-- Testimonials Section for RCM Platform -->
+<section id="testimonials" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">What Our Clients Are Saying</h2>
+      <div class="flex flex-wrap justify-center gap-10">
+        <div class="w-full md:w-1/3 p-6 bg-white rounded-lg shadow-lg">
+          <p class="text-lg italic mb-4">"Implementing this RCM platform revolutionized our billing process. Claims are submitted faster, and we've seen a 20% increase in revenue collections."</p>
+          <p class="font-semibold">Lisa.</p>
+          <p class="text-gray-500">Billing Manager, Medical Center</p>
+        </div>
+        <div class="w-full md:w-1/3 p-6 bg-white rounded-lg shadow-lg">
+          <p class="text-lg italic mb-4">"The platform has drastically reduced our administrative burden. We’re now able to focus more on patient care instead of chasing payments."</p>
+          <p class="font-semibold">Raj.</p>
+          <p class="text-gray-500">Practice Owner, Cardiology Clinic</p>
+        </div>
+        <div class="w-full md:w-1/3 p-6 bg-white rounded-lg shadow-lg">
+          <p class="text-lg italic mb-4">"With real-time claims tracking and automated coding, we’ve cut down on billing errors and speeded up reimbursements. It’s a game-changer!"</p>
+          <p class="font-semibold">kumar.</p>
+          <p class="text-gray-500">Revenue Cycle Director, Healthcare Network</p>
+        </div>
+      </div>
     </div>
 </section>
 
-<!-- Call-to-Action Section -->
-<section class=" text-black py-20">
-    <div class="max-w-6xl mx-auto text-center px-6">
-        <h2 class="text-3xl font-bold mb-6">Ready to Streamline Your Dental Billing?</h2>
-        <p class="text-lg mb-8">Let us help you optimize your billing process, improve cash flow, and reduce administrative burdens. Our team is ready to assist!</p>
-        <a href="contact.html" class="cta-button">Get Started Today</a>
+
+  <!-- Call to Action Section -->
+  <section id="cta" class="bg-blue-800 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold mb-4">Get Started with Our Services Today</h2>
+      <p class="text-lg mb-8">We're here to support your health journey every step of the way. Schedule your appointment online or call us for assistance.</p>
+      <a href="contact.html" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg transition duration-300">Schedule an Appointment</a>
     </div>
-</section>
-</main>
- <!-- Footer Links Section -->
+  </section>
+
+   <!-- Footer Links Section -->
  <footer>
   <section class="bg-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left text-sm">
@@ -416,6 +372,8 @@
   </div>
 </footer>
 
+
 <script src="scripts.js"></script>
 </body>
+
 </html>
