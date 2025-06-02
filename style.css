@@ -66,6 +66,7 @@
     
  header {
       height:100px;
+      padding-bottom:5px;
     }
     header img {
       height: 100%;
@@ -81,6 +82,7 @@
       transition: opacity 0.3s ease;
       font-size: 1.25rem;
       font-weight:lighter;
+      background-color:whitesmoke;
     }
     .dropdown.show {
       
